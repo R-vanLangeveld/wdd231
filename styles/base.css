@@ -84,16 +84,17 @@ a {
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline 2px aquamarine;
-}
-
 a:visited {
     color: #19a0c9;
 }
 
 a.active {
     color: gold;
+    text-decoration: underline 2px gold;
+}
+
+a:hover {
+    text-decoration: underline 2px aquamarine;
 }
 
 
@@ -129,6 +130,11 @@ button {
 #courseList {
     justify-items: center;
     border-top: 2px solid #4d4d4d;
+    border-bottom: 2px solid #4d4d4d;
+}
+
+p {
+    text-align: center;
 }
 
 h2 {
@@ -181,13 +187,13 @@ footer {
 
 footer p {
     color: white;
-    text-align: center;
     margin: 5px;
-    justify-self: end;
 }
 
 footer img {
     justify-self: start;
+    grid-column: 2/3;
+    grid-row: 1/3;
 }
 
 

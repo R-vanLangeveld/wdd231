@@ -1,8 +1,6 @@
-const year = document.querySelector("#year");
 const today = new Date();
-currentyear.innerHTML = `<span class="highlight">${today.getFullYear()}</span>`;
-var lastModified = document.lastModified;
-document.getElementById("modified").innerHTML = lastModified;
+currentyear.innerHTML = today.getFullYear();
+document.getElementById("lastModified").innerHTML = `Last Modification: ${document.lastModified}`;
 
 const hamButton = document.querySelector('#menu');
 const navigation = document.querySelector('nav');
@@ -110,6 +108,7 @@ wddCourses.addEventListener("click", () => {
 
 function createCourseList(filteredCourses) {
     document.querySelector("#courseList").innerHTML = "";
+    const courseCredits = []
     filteredCourses.forEach(course => {
         let div = document.createElement("div");
         let name = document.createElement("p");
@@ -119,7 +118,12 @@ function createCourseList(filteredCourses) {
         if (course.completed == true) {
             div.setAttribute("class", "done");
         }
-
+        courseCredits.push(course.credits);
         document.querySelector("#courseList").appendChild(div);
     })
+
+    document.querySelector("#creds").innerHTML = courseCredits.reduce(
+        (accumulator, currentValue) => accumulator + currentValue,
+        0,
+    );
 }
