@@ -146,7 +146,8 @@ h2 {
     font-family: var(--heading-font);
 }
 
-.course, .done {
+.course,
+.done {
     margin: 5px;
     border: black thin solid;
     border-radius: 0.5rem;
@@ -160,9 +161,12 @@ h2 {
 }
 
 figure {
-    justify-self: center;
     max-width: fit-content;
-    margin: 5px 15px;
+    margin: auto;
+}
+
+figure img {
+    padding: 0 5px;
 }
 
 figcaption {
@@ -232,7 +236,8 @@ footer img {
         grid-template-rows: auto auto;
     }
 
-    .course, .done {
+    .course,
+    .done {
         width: 200px;
     }
 }
