@@ -14,7 +14,7 @@
             "address": "fse",
             "phone": "111-333-1234",
             "siteUrl": "url",
-            "icon": "file name",
+            "icon": "https://placehold.co/100",
             "level": "3",
             "tagline": "text"
         },
@@ -23,7 +23,7 @@
             "address": "fse",
             "phone": "111-333-1234",
             "siteUrl": "url",
-            "icon": "file name",
+            "icon": "https://placehold.co/100",
             "level": "1",
             "tagline": "text"
         },
@@ -32,7 +32,7 @@
             "address": "fse",
             "phone": "111-333-1234",
             "siteUrl": "url",
-            "icon": "file name",
+            "icon": "https://placehold.co/100",
             "level": "2",
             "tagline": "text"
         },
@@ -41,7 +41,7 @@
             "address": "fse",
             "phone": "111-333-1234",
             "siteUrl": "url",
-            "icon": "file name",
+            "icon": "https://placehold.co/150",
             "level": "1",
             "tagline": "text"
         },
@@ -50,7 +50,7 @@
             "address": "fse",
             "phone": "111-333-1234",
             "siteUrl": "url",
-            "icon": "file name",
+            "icon": "https://placehold.co/150",
             "level": "2",
             "tagline": "text"
         },
@@ -59,7 +59,7 @@
             "address": "fse",
             "phone": "111-333-1234",
             "siteUrl": "url",
-            "icon": "file name",
+            "icon": "https://placehold.co/200",
             "level": "1",
             "tagline": "text"
         }
