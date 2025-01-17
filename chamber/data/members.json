@@ -1,0 +1,67 @@
+{
+    "members": [
+        {
+            "name": "fse",
+            "address": "fse",
+            "phone": "111-333-1234",
+            "siteUrl": "url",
+            "icon": "https://placehold.co/100",
+            "level": "1",
+            "tagline": "text"
+        },
+        {
+            "name": "pop",
+            "address": "fse",
+            "phone": "111-333-1234",
+            "siteUrl": "url",
+            "icon": "file name",
+            "level": "3",
+            "tagline": "text"
+        },
+        {
+            "name": "fse",
+            "address": "fse",
+            "phone": "111-333-1234",
+            "siteUrl": "url",
+            "icon": "file name",
+            "level": "1",
+            "tagline": "text"
+        },
+        {
+            "name": "fse",
+            "address": "fse",
+            "phone": "111-333-1234",
+            "siteUrl": "url",
+            "icon": "file name",
+            "level": "2",
+            "tagline": "text"
+        },
+        {
+            "name": "fse",
+            "address": "fse",
+            "phone": "111-333-1234",
+            "siteUrl": "url",
+            "icon": "file name",
+            "level": "1",
+            "tagline": "text"
+        },
+        {
+            "name": "fse",
+            "address": "fse",
+            "phone": "111-333-1234",
+            "siteUrl": "url",
+            "icon": "file name",
+            "level": "2",
+            "tagline": "text"
+        },
+        {
+            "name": "fse",
+            "address": "fse",
+            "phone": "111-333-1234",
+            "siteUrl": "url",
+            "icon": "file name",
+            "level": "1",
+            "tagline": "text"
+        }
+    ]
+}
