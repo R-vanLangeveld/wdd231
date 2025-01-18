@@ -1,67 +1,67 @@
 {
     "members": [
         {
-            "name": "fse",
-            "address": "fse",
+            "name": "business name",
+            "address": "place street",
             "phone": "111-333-1234",
-            "siteUrl": "url",
+            "siteUrl": "business.com",
             "icon": "https://placehold.co/100",
             "level": "1",
-            "tagline": "text"
+            "tagline": "business tag line"
         },
         {
-            "name": "pop",
-            "address": "fse",
+            "name": "business name",
+            "address": "place street",
             "phone": "111-333-1234",
-            "siteUrl": "url",
+            "siteUrl": "business.com",
             "icon": "https://placehold.co/100",
             "level": "3",
-            "tagline": "text"
+            "tagline": "business tag line"
         },
         {
-            "name": "fse",
-            "address": "fse",
+            "name": "business name",
+            "address": "place street",
             "phone": "111-333-1234",
-            "siteUrl": "url",
+            "siteUrl": "business.com",
             "icon": "https://placehold.co/100",
             "level": "1",
-            "tagline": "text"
+            "tagline": "business tag line"
         },
         {
-            "name": "fse",
-            "address": "fse",
+            "name": "business name",
+            "address": "place street",
             "phone": "111-333-1234",
-            "siteUrl": "url",
+            "siteUrl": "business.com",
             "icon": "https://placehold.co/100",
             "level": "2",
-            "tagline": "text"
+            "tagline": "business tag line"
         },
         {
-            "name": "fse",
-            "address": "fse",
+            "name": "business name",
+            "address": "place street",
             "phone": "111-333-1234",
-            "siteUrl": "url",
-            "icon": "https://placehold.co/150",
+            "siteUrl": "business.com",
+            "icon": "https://placehold.co/100",
             "level": "1",
-            "tagline": "text"
+            "tagline": "business tag line"
         },
         {
-            "name": "fse",
-            "address": "fse",
+            "name": "business name",
+            "address": "place street",
             "phone": "111-333-1234",
-            "siteUrl": "url",
-            "icon": "https://placehold.co/150",
+            "siteUrl": "business.com",
+            "icon": "https://placehold.co/100",
             "level": "2",
-            "tagline": "text"
+            "tagline": "business tag line"
         },
         {
-            "name": "fse",
-            "address": "fse",
+            "name": "business name",
+            "address": "place street",
             "phone": "111-333-1234",
-            "siteUrl": "url",
-            "icon": "https://placehold.co/200",
+            "siteUrl": "business.com",
+            "icon": "https://placehold.co/100",
             "level": "1",
-            "tagline": "text"
+            "tagline": "business tag line"
         }
     ]
 }

@@ -17,7 +17,7 @@ async function getMemberData() {
     displayMembers(data.members);
 }
 
-const cards = document.querySelector(".cards");
+const cards = document.querySelector("#cards");
 
 getMemberData();
 
@@ -31,6 +31,7 @@ const displayMembers = (members) => {
         let website = document.createElement("p");
         let img = document.createElement("img");
         let membership = document.createElement("p");
+        let div = document.createElement("div");
 
         companyName.textContent = `${member.name}`;
         companyAddress.textContent = `ADDRESS: ${member.address}`;
@@ -48,11 +49,25 @@ const displayMembers = (members) => {
         card.appendChild(companyName);
         card.appendChild(tagLine);
         card.appendChild(img);
-        card.appendChild(companyAddress);
-        card.appendChild(companyPhone);
-        card.appendChild(website);
-        card.appendChild(membership);
+        div.appendChild(companyAddress);
+        div.appendChild(companyPhone);
+        div.appendChild(website);
+        div.appendChild(membership);
+        card.appendChild(div);
 
         cards.appendChild(card);
     });
 }
+
+const gridbutton = document.querySelector("#grid");
+const listbutton = document.querySelector("#list");
+
+gridbutton.addEventListener("click", () => {
+    cards.classList.remove("list");
+    cards.classList.add("cards");
+});
+
+listbutton.addEventListener("click", () => {
+    cards.classList.add("list");
+    cards.classList.remove("cards");
+});

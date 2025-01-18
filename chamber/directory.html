@@ -4,19 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber Directory</title>
-    <!-- I need to change the content -->
-    <meta name="description" content="WDD 231 - Front End Development I - Ryndee van Langeveld">
+    <title>Chamber of Commerce Directory</title>
+    <meta name="description"
+        content="WDD 231 - Front End Development I - Chamber of Commerce Directory - Ryndee van Langeveld">
     <meta name="author" content="Ryndee van Langeveld">
     <!-- I should make a more professional icon -->
     <!-- <link rel="icon" href="favicon.ico"> -->
-    <!-- I need to change the content -->
-    <meta property="og:title" content="WDD 231 - Front End Development I - Ryndee van Langeveld">
+    <meta property="og:title" content="Chamber of Commerce Directory">
     <meta property="og:type" content="website">
-    <!-- I need to change the content -->
-    <meta property="og:description" content="desc">
+    <meta property="og:description"
+        content="The directory page contains a list of the members of the Chamber of Commerce.">
     <!-- <meta property="og:image" content="https://r-vanlangeveld.github.io/wdd231/chamber/images/"> -->
-    <meta property="og:url" content="https://r-vanlangeveld.github.io/wdd231/chamber/directory">
+    <meta property="og:url" content="https://r-vanlangeveld.github.io/wdd231/chamber/">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,8 +26,8 @@
 
 <body>
     <header>
-        <img src="https://placehold.co/50?text=github" alt="replace this">
-        <h1>location</h1>
+        <img src="https://placehold.co/50" alt="replace this" width="50" height="50">
+        <h1>Utah</h1>
         <button id="menu" title="Nav Menu"></button>
         <nav>
             <ul>
@@ -41,42 +40,54 @@
     </header>
 
     <main>
-        <!-- <img src="https://placehold.co/700x200?text=scalable,+responsive+hero+image" alt="scalable, responsive hero image" class="hero"> -->
-        <h1>Home</h1>
+        <picture class="hero">
+            <source srcset="https://placehold.co/1600x400/webp?text=scalable,+responsive+hero+image"
+                media="(min-width: 800px)">
+            <source srcset="https://placehold.co/800x200/webp?text=scalable,+responsive+hero+image"
+                media="(min-width: 320px)">
+            <img src="https://placehold.co/320x80/webp?text=scalable,+responsive+hero+image"
+                alt="scalable,+responsive+hero+image" width="320" height="80">
+        </picture>
+        <h2>Home</h2>
         <section>
             <h2>Events</h2>
         </section>
+        <!-- Non responsive weather -->
         <section>
             <h2>Current Weather</h2>
+            <p>27°F</p>
+            <p>Mostly Cloudy</p>
+            <p>High: 29°</p>
+            <p>Low: 17°</p>
+            <p>Humidity: 57%</p>
+            <p>Sunrise: 7:47am</p>
+            <p>Sunset: 5:28pm</p>
         </section>
         <section>
             <h2>Weather Forcast</h2>
+            <p>Today: 29°F</p>
+            <p>Sunday: 29°F</p>
+            <p>Monday: 24°F</p>
         </section>
-        <div class="cards">
-            <!-- The following section can be removed -->
-            <section>
-                <h2>business name</h2>
-                <p>business tag line</p>
-                <div>
-                    <img src="https://placehold.co/100" alt="replace with something">
-                    <p><b>EMAIL:</b> info@gmail.com<br>
-                        <b>PHONE:</b> 111-333-1234<br>
-                        <b>URL:</b> mybusiness.com
-                    </p>
-                </div>
-            </section>
+        <div class="gridList">
+            <button id="grid">Grid</button>
+            <button id="list">List</button>
+        </div>
+        <div id="cards" class="cards">
         </div>
     </main>
 
     <footer>
-        <p><b>location Chamber of Commerce</b><br>address<br>info@[change this].org<br>phone number</p>
-        <nav class="social">
-            <a href="https://github.com/R-vanLangeveld"><img src="https://placehold.co/70?text=github" alt="GitHub"></a>
-            <a href="https://facebook.com"><img src="https://placehold.co/70?text=facebook" alt="Facebook"></a>
-            <a href="https://www.linkedin.com/feed/"><img src="https://placehold.co/70?text=linkedin"
-                    alt="LinkedIn"></a>
-        </nav>
-        <p>WDD231 Class Project<br>Ryndee van Langeveld<br>&copy;<span id="currentyear"></span> location Chamber of
+        <p><b>Utah Chamber of Commerce</b><br>address<br>info@utahcc.org<br>(801) 397-6821</p>
+        <div class="social">
+            <a href="https://github.com/R-vanLangeveld">
+                <img src="images/github_icon.svg" alt="GitHub" width="70" height="70"></a>
+            <a href="https://facebook.com">
+                <img src="images/facebook_icon.svg" alt="Facebook" width="70" height="70"></a>
+            <a href="https://www.linkedin.com/feed/">
+                <img src="images/linkedin_icon.svg" alt="LinkedIn" width="70" height="70"></a>
+        </div>
+        <p>WDD231 Class Project<br>Ryndee van Langeveld<br>&copy;<span id="currentyear"></span> Utah Chamber of
             Commerce<br><span id="lastModified"></span></p>
     </footer>
 </body>
