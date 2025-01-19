@@ -159,6 +159,21 @@ h2 {
 
 #cards {
     margin: 2px;
+    text-wrap: wrap;
+}
+
+#cards a {
+    color: #1d2db6;
+    text-decoration: underline 2px #1d2db6;
+}
+
+#cards a:hover {
+    color: #b118c5;
+    text-decoration: underline 2px #b118c5;
+}
+
+#cards a:visited {
+    text-decoration: underline 2px #ffd700;
 }
 
 .cards {
@@ -169,15 +184,16 @@ h2 {
 .cards section {
     display: grid;
     grid-template-columns: 110px auto;
-    width: 300px;
+    grid-template-rows: 41px 48px auto;
     justify-self: center;
+    width: 300px;
 }
 
 .cards h2,
 .cards p {
     grid-column: 1/3;
     text-align: center;
-    background-color: #bed;
+    background-color: #e4f5dc;
 }
 
 .cards h2 {
@@ -186,12 +202,13 @@ h2 {
 
 .cards p {
     border-bottom: var(--border);
-    padding: 6px;
+    padding: 6px 4px 0;
     margin: -6px 0 0;
 }
 
 .cards img {
     margin: 5px;
+    align-self: center;
 }
 
 .cards div p {
@@ -220,6 +237,7 @@ h2 {
 
 .list img {
     display: none;
+    align-self: center;
 }
 
 .list div {
@@ -231,7 +249,7 @@ h2 {
 }
 
 .list section:nth-child(even) {
-    background-color: #bed;
+    background-color: #e4f5dc;
 }
 
 .list h2,
@@ -308,7 +326,7 @@ footer p {
         grid-column: 1/4;
     }
 
-    .list section img {
+    .list img {
         display: block;
         grid-column: 2/3;
         grid-row: 1/3;

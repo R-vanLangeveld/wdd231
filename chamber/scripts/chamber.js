@@ -28,16 +28,18 @@ const displayMembers = (members) => {
         let tagLine = document.createElement("p");
         let companyAddress = document.createElement("p");
         let companyPhone = document.createElement("p");
-        let website = document.createElement("p");
+        let website = document.createElement("a");
         let img = document.createElement("img");
         let membership = document.createElement("p");
         let div = document.createElement("div");
+        let siteP = document.createElement("p");
 
         companyName.textContent = `${member.name}`;
         companyAddress.textContent = `ADDRESS: ${member.address}`;
         companyPhone.textContent = `PHONE: ${member.phone}`;
         membership.textContent = `Membership level ${member.level}`;
-        website.textContent = `${member.siteUrl}`;
+        website.textContent = member.name;
+        website.setAttribute("href", member.siteUrl);
         tagLine.textContent = `${member.tagline}`
 
         img.setAttribute("src", member.icon);
@@ -46,12 +48,13 @@ const displayMembers = (members) => {
         img.setAttribute("width", "100");
         img.setAttribute("height", "100");
 
+        siteP.appendChild(website);
         card.appendChild(companyName);
         card.appendChild(tagLine);
         card.appendChild(img);
         div.appendChild(companyAddress);
         div.appendChild(companyPhone);
-        div.appendChild(website);
+        div.appendChild(siteP);
         div.appendChild(membership);
         card.appendChild(div);
 
