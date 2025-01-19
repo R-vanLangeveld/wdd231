@@ -1,67 +1,67 @@
 {
     "members": [
         {
-            "name": "business name",
-            "address": "place street",
-            "phone": "111-333-1234",
-            "siteUrl": "business.com",
-            "icon": "https://placehold.co/100",
-            "level": "1",
-            "tagline": "business tag line"
-        },
-        {
-            "name": "business name",
-            "address": "place street",
-            "phone": "111-333-1234",
-            "siteUrl": "business.com",
+            "name": "Whitewater Rafting",
+            "address": "100 N Johnson Mill Rd Midway, UT 84049",
+            "phone": "800-123-4567",
+            "siteUrl": "https://r-vanlangeveld.github.io/wdd130/wwr/",
             "icon": "https://placehold.co/100",
             "level": "3",
-            "tagline": "business tag line"
+            "tagline": "Join us for a Whitewater Rafting Experience of a Lifetime!"
         },
         {
-            "name": "business name",
-            "address": "place street",
-            "phone": "111-333-1234",
-            "siteUrl": "business.com",
+            "name": "Lego Store",
+            "address": "123 Main Street",
+            "phone": "801-343-1234",
+            "siteUrl": "https://www.lego.com/en-us",
             "icon": "https://placehold.co/100",
             "level": "1",
-            "tagline": "business tag line"
+            "tagline": "Build with imagination"
         },
         {
-            "name": "business name",
-            "address": "place street",
-            "phone": "111-333-1234",
-            "siteUrl": "business.com",
+            "name": "Domino's",
+            "address": "465 Main Street",
+            "phone": "801-438-1634",
+            "siteUrl": "https://www.dominos.com/en/",
+            "icon": "https://placehold.co/100",
+            "level": "1",
+            "tagline": "Feed the power of possible one pizza at a time"
+        },
+        {
+            "name": "UPS",
+            "address": "836 North Temple",
+            "phone": "801-573-8243",
+            "siteUrl": "https://www.ups.com/us/en/home",
             "icon": "https://placehold.co/100",
             "level": "2",
-            "tagline": "business tag line"
+            "tagline": "Moving our world forward by delivering what matters"
         },
         {
-            "name": "business name",
-            "address": "place street",
-            "phone": "111-333-1234",
-            "siteUrl": "business.com",
+            "name": "FedEx",
+            "address": "789 Center Street",
+            "phone": "801-284-4254",
+            "siteUrl": "https://www.fedex.com/global/choose-location.html",
             "icon": "https://placehold.co/100",
             "level": "1",
-            "tagline": "business tag line"
+            "tagline": "The world on time"
         },
         {
-            "name": "business name",
-            "address": "place street",
-            "phone": "111-333-1234",
-            "siteUrl": "business.com",
+            "name": "Pizza Hut",
+            "address": "492 Redwood Road",
+            "phone": "801-408-3760",
+            "siteUrl": "https://www.pizzahut.com",
             "icon": "https://placehold.co/100",
             "level": "2",
-            "tagline": "business tag line"
+            "tagline": "No one outpizzas the hut"
         },
         {
-            "name": "business name",
-            "address": "place street",
-            "phone": "111-333-1234",
-            "siteUrl": "business.com",
+            "name": "Arby's",
+            "address": "976 South Temple",
+            "phone": "801-241-1592",
+            "siteUrl": "https://www.arbys.com/",
             "icon": "https://placehold.co/100",
             "level": "1",
-            "tagline": "business tag line"
+            "tagline": "Arby's, We Have the Meats!"
         }
     ]
 }
