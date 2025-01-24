@@ -17,21 +17,13 @@ const displayMembers = (members) => {
         let card = document.createElement("section");
         let companyName = document.createElement("h3");
         let tagLine = document.createElement("p");
-        let companyAddress = document.createElement("p");
-        let companyPhone = document.createElement("p");
-        let website = document.createElement("a");
         let img = document.createElement("img");
-        let membership = document.createElement("p");
         let div = document.createElement("div");
-        let siteP = document.createElement("p");
 
         companyName.textContent = `${member.name}`;
-        companyAddress.innerHTML = `<b>ADDRESS:</b> ${member.address}`;
-        companyPhone.innerHTML = `<b>PHONE:</b> ${member.phone}`;
-        membership.textContent = `Membership level ${member.level}`;
-        website.textContent = member.name;
-        website.setAttribute("href", member.siteUrl);
         tagLine.textContent = `${member.tagline}`
+        div.innerHTML = `<p><b>ADDRESS:</b> ${member.address}</p><p><b>PHONE:</b> ${member.phone}</p>
+        <p><a href="${member.siteUrl}">${member.name}</a></p><p>Membership level ${member.level}</p>`;
 
         img.setAttribute("src", member.icon);
         img.setAttribute("alt", `${member.name}'s Logo`);
@@ -39,16 +31,10 @@ const displayMembers = (members) => {
         img.setAttribute("width", "100");
         img.setAttribute("height", "100");
 
-        siteP.appendChild(website);
         card.appendChild(companyName);
         card.appendChild(tagLine);
         card.appendChild(img);
-        div.appendChild(companyAddress);
-        div.appendChild(companyPhone);
-        div.appendChild(siteP);
-        div.appendChild(membership);
         card.appendChild(div);
-
         cards.appendChild(card);
     });
 }
@@ -79,18 +65,9 @@ if (document.querySelector("#page").textContent === "Directory") {
 else if (document.querySelector("#page").textContent === "Home") {
 
     const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=40.56&lon=-111.93&units=imperial&appid=351e2c8004bccca4128dc54392d01d9a';
-    const currentTemp = document.querySelector('#current-temp');
-    const weatherDesc = document.querySelector('#weDesc');
-    const high = document.querySelector('#high');
-    const low = document.querySelector('#low');
-    const humidity = document.querySelector('#humidity');
-    const sunrise = document.querySelector('#sunrise');
-    const sunset = document.querySelector('#sunset');
-
+    const weather = document.querySelector('#weather');
     const forcastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=40.56&lon=-111.93&units=imperial&appid=351e2c8004bccca4128dc54392d01d9a`;
-    const thisHigh = document.querySelector(`#thisHigh`);
-    const nextHigh = document.querySelector(`#nextHigh`);
-    const twoDayHigh = document.querySelector(`#twoDayHigh`)
+    const forcast = document.querySelector(`#forcast`);
 
     async function apiFetch() {
         try {
@@ -122,52 +99,49 @@ else if (document.querySelector("#page").textContent === "Home") {
     const displayResults = (info) => {
 
         const sunTime = (sun) => {
-            const convert = new Date(sun * 1000).toLocaleTimeString();
-
-            return convert;
+            return new Date(sun * 1000).toLocaleTimeString();
         }
-        currentTemp.innerHTML = `${Math.floor(info.main.temp)}&deg;F`;
-        high.innerHTML = `High: ${Math.floor(info.main.temp_max)}&deg;F`;
-        low.innerHTML = `Low: ${Math.floor(info.main.temp_min)}&deg;F`;
-        humidity.innerHTML = `Humidity: ${info.main.humidity}%`;
-        sunrise.innerHTML = `Sunrise: ${sunTime(info.sys.sunrise)}`;
-        sunset.innerHTML = `Sunset: ${sunTime(info.sys.sunset)}`;
-        weatherDesc.innerHTML = `${info.weather[0].description}`;
+
+        let words = info.weather[0].description.split(" ");
+        let desc = "hi";
+
+        for (let index = 0; index < words.length; index++) {
+            let word = words[index];
+            desc = desc.concat(" ", word.replace(word.at(0), word.at(0).toUpperCase()));
+        }
+
+        weather.innerHTML = `${Math.floor(info.main.temp)}&deg;F<br><br>${desc.replace("hi ", "")}<br><br>High: ${Math.floor(info.main.temp_max)}&deg;F<br><br>Low: ${Math.floor(info.main.temp_min)}&deg;F<br><br>Humidity: ${info.main.humidity}%<br><br>Sunrise: ${sunTime(info.sys.sunrise)}<br><br>Sunset: ${sunTime(info.sys.sunset)}`;
     }
 
     const displayResults2 = (info) => {
 
         const dayName = (dayNumber) => {
             const weekDay = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-            const test2 = new Date((info.list[dayNumber].dt) * 1000).getDay();
-            day = weekDay[test2] + `:`;
-            return day;
+            return `${weekDay[new Date((info.list[dayNumber].dt) * 1000).getDay()]}:`;
         }
-        thisHigh.innerHTML = `Today: ${Math.floor(info.list[0].main.temp)}&deg;F`;
-        nextHigh.innerHTML = `${dayName(8)} ${Math.floor(info.list[8].main.temp)}&deg;F`;
-        twoDayHigh.innerHTML = `${dayName(16)} ${Math.floor(info.list[16].main.temp)}&deg;F`;
+
+        forcast.innerHTML = `Today: ${Math.floor(info.list[0].main.temp)}&deg;F<br><br>${dayName(8)} ${Math.floor(info.list[8].main.temp)}&deg;F<br><br>${dayName(16)} ${Math.floor(info.list[16].main.temp)}&deg;F<br><br>Updates every 3 hours<br><br>Last update: ${new Date((info.list[0].dt) * 1000).toLocaleTimeString()}`;
     }
 
     async function getMemberData() {
         const response = await fetch(membersUrl);
         const data = await response.json();
         const filteredMembers = data.members.filter((member) => parseInt(member.level) >= 2);
-
         const randomMembers = [];
         const usedNumbers = [];
-       
+
         for (let index = 0; index < 3; index++) {
             currentNumber = Math.floor(Math.random() * filteredMembers.length);
-            usedNumbers.push(currentNumber); 
+            usedNumbers.push(currentNumber);
             randomMembers.push(filteredMembers[usedNumbers[index]]);
-                        
+
             while (usedNumbers.filter((num) => num === currentNumber).length > 1) {
                 usedNumbers.pop(currentNumber);
-                randomMembers.pop(filteredMembers[usedNumbers[index-1]]);
+                randomMembers.pop(filteredMembers[usedNumbers[index - 1]]);
                 index -= 1;
             }
         }
-        
+
         displayMembers(randomMembers);
     }
 

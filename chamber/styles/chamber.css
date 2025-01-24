@@ -194,6 +194,7 @@ section li {
 
 .cards h3,
 .cards p {
+    background-color: #e4f5dc;
     grid-column: 1/3;
     text-align: center;
 }
@@ -247,14 +248,12 @@ section li {
     margin: 0;
 }
 
-.list section:nth-child(even),
-.cards h3,
-.cards p,
-section h2 {
+.list section:nth-child(even) {
     background-color: #e4f5dc;
 }
 
 section h2 {
+    background-color: #e4f5dc;
     border-bottom: var(--border);
 }
 
