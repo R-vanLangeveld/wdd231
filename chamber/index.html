@@ -4,17 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber of Commerce Directory</title>
+    <title>Chamber of Commerce Home</title>
     <meta name="description"
-        content="WDD 231 - Front End Development I - Chamber of Commerce Directory - Ryndee van Langeveld">
+        content="WDD 231 - Front End Development I - Chamber of Commerce Home - Ryndee van Langeveld">
     <meta name="author" content="Ryndee van Langeveld">
     <link rel="icon" href="favicon.ico">
-    <meta property="og:title" content="Chamber of Commerce Directory">
+    <meta property="og:title" content="Chamber of Commerce">
     <meta property="og:type" content="website">
-    <meta property="og:description"
-        content="The directory page contains a list of the members of the Chamber of Commerce.">
+    <meta property="og:description" content="The homepage of the Chamber of Commerce.">
     <meta property="og:image" content="https://r-vanlangeveld.github.io/wdd231/images/south-jordan-utah.jpg">
-    <meta property="og:url" content="https://r-vanlangeveld.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://r-vanlangeveld.github.io/wdd231/chamber/">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,10 +29,10 @@
         <button id="menu" title="Nav Menu"></button>
         <nav>
             <ul>
-                <!-- <li><a href="https://r-vanlangeveld.github.io/wdd231/chamber/" title="Home">Home</a></li> -->
+                <li><a href="#" title="Home" class="active">Home</a></li>
+                <!-- <li><a href="https://r-vanlangeveld.github.io/wdd231/chamber/directory.html" title="Directory">Directory</a></li> -->
                 <!-- Uncomment ↑ delete ↓ -->
-                <li><a href="index.html" title="Home">Home</a></li>
-                <li><a href="#" title="Directory" class="active">Directory</a></li>
+                <li><a href="directory.html" title="Directory">Directory</a></li>
                 <li><a href="#" title="Join">Join</a></li>
                 <li><a href="#" title="Discover">Discover</a></li>
             </ul>
@@ -46,18 +45,35 @@
             <source srcset="images/hero-medium.webp" media="(min-width: 320px)">
             <img src="images/hero-small.webp" alt="scalable,+responsive+hero+image" width="320" height="80">
         </picture>
-        <h2 id="page">Directory</h2>
-        <div class="gridList">
-            <button id="grid">Grid</button>
-            <button id="list">List</button>
-        </div>
+        <h2 id="page">Home</h2>
+        <section>
+            <h2>Events</h2>
+            <p>There are currently no events scheduled</p>
+        </section>
+        <section>
+            <h2>Current Weather</h2>
+            <p id="current-temp">&deg;F</p>
+            <p id="weDesc">Look outside</p>
+            <p id="high">&deg;F</p>
+            <p id="low">&deg;F</p>
+            <p id="humidity">Who knows</p>
+            <p id="sunrise">During the morning</p>
+            <p id="sunset">During the evening</p>
+        </section>
+        <section>
+            <h2>Weather Forcast</h2>
+            <p id="thisHigh"></p>
+            <p id="nextHigh"></p>
+            <p id="twoDayHigh"></p>
+        </section>
         <section id="members">
-            <h2>Members</h2>
+            <h2>Spotlights</h2>
             <div id="cards" class="cards">
                 <section>
                     <h3>business name</h3>
                     <p>business tag line</p>
-                    <img src="https://placehold.co/100" alt="replace with something">
+                    <img src="https://placehold.co/100" alt="replace with something" width="100" height="100"
+                        loading="lazy">
                     <div>
                         <p>EMAIL: info@gmail.com</p>
                         <p>PHONE: 111-333-1234</p>
@@ -68,7 +84,8 @@
                 <section>
                     <h3>business name</h3>
                     <p>business tag line</p>
-                    <img src="https://placehold.co/100" alt="replace with something">
+                    <img src="https://placehold.co/100" alt="replace with something" width="100" height="100"
+                        loading="lazy">
                     <div>
                         <p>EMAIL: info@gmail.com</p>
                         <p>PHONE: 111-333-1234</p>
@@ -79,18 +96,8 @@
                 <section>
                     <h3>business name</h3>
                     <p>business tag line</p>
-                    <img src="https://placehold.co/100" alt="replace with something">
-                    <div>
-                        <p>EMAIL: info@gmail.com</p>
-                        <p>PHONE: 111-333-1234</p>
-                        <p>URL: <a href="#">mybusiness.com</a></p>
-                        <p>Level</p>
-                    </div>
-                </section>
-                <section>
-                    <h3>business name</h3>
-                    <p>business tag line</p>
-                    <img src="https://placehold.co/100" alt="replace with something">
+                    <img src="https://placehold.co/100" alt="replace with something" width="100" height="100"
+                        loading="lazy">
                     <div>
                         <p>EMAIL: info@gmail.com</p>
                         <p>PHONE: 111-333-1234</p>
