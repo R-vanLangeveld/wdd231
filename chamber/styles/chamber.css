@@ -86,22 +86,23 @@ nav.open ul {
     justify-content: space-around;
 }
 
-a {
+li a {
+    font-family: var(--heading-font);
     color: #fff;
     font-size: large;
     text-decoration: none;
 }
 
-a:visited {
+li a:visited {
     color: #37bde6;
 }
 
-a.active {
+li a.active {
     color: #ffd700;
     text-decoration: underline 2px #ffd700;
 }
 
-a:hover {
+li a:hover {
     text-decoration: underline 2px #7fffd4;
 }
 
@@ -165,21 +166,18 @@ section li {
     margin: 2px;
 }
 
-#cards a,
-.cta a {
+a {
     color: #1d2db6;
     text-decoration: underline 2px #1d2db6;
     font-family: var(--paragraph-font);
 }
 
-#cards a:hover,
-.cta a:hover {
+a:hover {
     color: #b118c5;
     text-decoration: underline 2px #b118c5;
 }
 
-#cards a:visited,
-.cta a:visited {
+a:visited {
     text-decoration: underline 2px #ffd700;
 }
 
