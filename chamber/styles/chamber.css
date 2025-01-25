@@ -165,17 +165,21 @@ section li {
     margin: 2px;
 }
 
-#cards a {
+#cards a,
+.cta a {
     color: #1d2db6;
     text-decoration: underline 2px #1d2db6;
+    font-family: var(--paragraph-font);
 }
 
-#cards a:hover {
+#cards a:hover,
+.cta a:hover {
     color: #b118c5;
     text-decoration: underline 2px #b118c5;
 }
 
-#cards a:visited {
+#cards a:visited,
+.cta a:visited {
     text-decoration: underline 2px #ffd700;
 }
 
@@ -266,6 +270,21 @@ section h2 {
     flex-wrap: wrap
 }
 
+.cta {
+    background-color: #e4f5dc;
+    border: var(--border);
+    border-radius: 0.5rem;
+    margin: 5px;
+    padding: 10px;
+    position: absolute;
+    top: 70px;
+    width: fit-content;
+}
+
+.cta.open {
+    top: 185px;
+}
+
 footer {
     color: #fff;
     background-color: var(--primary-color);
@@ -311,6 +330,10 @@ footer p {
         display: flex;
         justify-content: space-around;
         flex-direction: row;
+    }
+
+    .cta.open {
+        top: 80px;
     }
 
     main {

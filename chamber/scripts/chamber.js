@@ -64,6 +64,11 @@ if (document.querySelector("#page").textContent === "Directory") {
 }
 else if (document.querySelector("#page").textContent === "Home") {
 
+    const cta = document.querySelector(".cta");
+    hamButton.addEventListener('click', () => {
+        cta.classList.toggle('open');
+    });
+
     const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=40.56&lon=-111.93&units=imperial&appid=351e2c8004bccca4128dc54392d01d9a';
     const weather = document.querySelector('#weather');
     const forcastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=40.56&lon=-111.93&units=imperial&appid=351e2c8004bccca4128dc54392d01d9a`;
@@ -120,7 +125,7 @@ else if (document.querySelector("#page").textContent === "Home") {
             return `${weekDay[new Date((info.list[dayNumber].dt) * 1000).getDay()]}:`;
         }
 
-        forcast.innerHTML = `Today: ${Math.floor(info.list[0].main.temp)}&deg;F<br><br>${dayName(8)} ${Math.floor(info.list[8].main.temp)}&deg;F<br><br>${dayName(16)} ${Math.floor(info.list[16].main.temp)}&deg;F<br><br>Updates every 3 hours<br><br>Last update: ${new Date((info.list[0].dt) * 1000).toLocaleTimeString()}`;
+        forcast.innerHTML = `Today: ${Math.floor(info.list[0].main.temp)}&deg;F<br><br>${dayName(8)} ${Math.floor(info.list[8].main.temp)}&deg;F<br><br>${dayName(16)} ${Math.floor(info.list[16].main.temp)}&deg;F<br><br>Updates every 3 hours<br><br>Next update: ${new Date((info.list[0].dt) * 1000).toLocaleTimeString()}`;
     }
 
     async function getMemberData() {
