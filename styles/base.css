@@ -1,32 +1,34 @@
 :root {
     --primary-color: rebeccapurple;
-    --heading-font: Calligraffitti, serif;
-    --paragraph-font: Roboto, serif;
+    --heading-font: "Calligraffitti", serif;
+    --paragraph-font: "Roboto", sans-serif;
 }
 
 
 .calligraffitti-regular {
-    font-family: "Calligraffitti", system-ui;
-    font-weight: 400;
+    font-family: "Calligraffitti", serif;
+    font-weight: 700;
     font-style: normal;
 }
 
 .roboto-regular {
-    font-family: "Roboto", serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
+    font-variation-settings: "wdth" 100;
 }
 
 body {
     align-items: center;
     font-family: var(--paragraph-font);
+    margin: 0;
 }
 
 header {
     display: grid;
     grid-template-columns: auto auto auto;
     background-color: var(--primary-color);
-    color: white;
+    color: #fff;
     max-height: 200px;
 }
 
@@ -48,7 +50,7 @@ h1 {
     justify-self: end;
     background: none;
     border: none;
-    color: white;
+    color: #fff;
     min-width: 50px;
     max-width: 100px;
     height: 100px;
@@ -69,7 +71,7 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background-color: black;
+    background-color: #000;
 }
 
 .open a {
@@ -79,7 +81,7 @@ nav {
 a {
     padding: 2px;
     display: none;
-    color: white;
+    color: #fff;
     font-size: large;
     text-decoration: none;
 }
@@ -106,31 +108,36 @@ main {
 section {
     border: 3px solid #4d4d4d;
     border-radius: 0.5rem;
-    margin: 15px 5px;
+    margin: 10px 5px;
     min-height: fit-content;
+    background-color: #f1eece;
 }
 
 button {
+    font-family: var(--paragraph-font);
     margin: 5px;
-    border: black thin solid;
+    border: #000 thin solid;
     border-radius: 0.5rem;
-    background-color: black;
-    color: white;
+    background-color: #000;
+    color: #fff;
     width: 80px;
-    height: 30px;
+    height: 45px;
+}
+
+.buttons button:focus {
+    outline: 2px solid blue;
 }
 
 .buttons {
-    margin-top: -20px;
     display: flex;
-    height: 40px;
+    height: 55px;
     justify-content: center;
 }
 
 #courseList {
     justify-items: center;
-    border-top: 2px solid #4d4d4d;
-    border-bottom: 2px solid #4d4d4d;
+    border-top: 3px solid #4d4d4d;
+    border-bottom: 3px solid #4d4d4d;
 }
 
 p {
@@ -138,22 +145,27 @@ p {
 }
 
 h2 {
-    color: white;
+    color: #fff;
     background-color: var(--primary-color);
     text-align: center;
     padding: 15px;
-    margin-top: 0;
+    margin: 0;
+    font-family: var(--heading-font);
+    border-radius: 0.2rem;
+}
+
+h3 {
     font-family: var(--heading-font);
 }
 
 .course,
 .done {
     margin: 5px;
-    border: black thin solid;
+    border: #000 thin solid;
     border-radius: 0.5rem;
     width: 300px;
     text-align: center;
-    background-color: darkgrey;
+    background-color: #a9a9a9;
 }
 
 .done {
@@ -166,7 +178,7 @@ figure {
 }
 
 figure img {
-    padding: 0 5px;
+    padding: 5px 5px 0;
 }
 
 figcaption {
@@ -180,6 +192,66 @@ li {
     text-align: left;
 }
 
+#courseDetails {
+    background-color: #fff;
+    border: #4d4d4d 3px solid;
+    border-radius: 0.5rem;
+    padding: 15px;
+    max-width: 600px;
+    width: 90%;
+}
+
+#courseDetails p,
+#courseDetails h3 {
+    text-align: start;
+    margin: 0;
+    padding: 8px 0;
+}
+
+#courseDetails h2 {
+    height: 24px;
+    padding: 22px;
+}
+
+::backdrop {
+    background-color: #4d4d4dc6;
+}
+
+dialog button {
+    position: absolute;
+    top: 19px;
+    right: 19px;
+    padding: .5rem 1rem;
+    border: #000 thin solid;
+    color: #000;
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+}
+
+#courseList div:hover {
+
+    animation: 750ms up-and-down infinite;
+}
+
+@keyframes up-and-down {
+    from {
+        margin: 5px;
+    }
+
+    33% {
+        margin: 1px 5px 9px;
+    }
+
+    66% {
+        margin: 9px 5px 1px;
+    }
+
+    to {
+        margin: 5px;
+    }
+}
+
 
 footer {
     background-color: var(--primary-color);
@@ -190,7 +262,7 @@ footer {
 }
 
 footer p {
-    color: white;
+    color: #fff;
     margin: 5px;
 }
 

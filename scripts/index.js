@@ -1,6 +1,5 @@
-const today = new Date();
-currentyear.innerHTML = today.getFullYear();
-document.getElementById("lastModified").innerHTML = `Last Modification: ${document.lastModified}`;
+currentyear.innerHTML = new Date().getFullYear();
+lastModified.innerHTML = `Last Modification: ${document.lastModified}`;
 
 const hamButton = document.querySelector('#menu');
 const navigation = document.querySelector('nav');
@@ -108,22 +107,38 @@ wddCourses.addEventListener("click", () => {
 
 function createCourseList(filteredCourses) {
     document.querySelector("#courseList").innerHTML = "";
-    const courseCredits = []
+    const courseCredits = [];
     filteredCourses.forEach(course => {
         let div = document.createElement("div");
-        let name = document.createElement("p");
-        name.textContent = `${course.subject} ${course.number}`;
-        div.appendChild(name);
+        div.innerHTML = `<p>${course.subject} ${course.number}</p>`;
         div.setAttribute("class", "course");
         if (course.completed == true) {
             div.setAttribute("class", "done");
         }
         courseCredits.push(course.credits);
         document.querySelector("#courseList").appendChild(div);
-    })
+
+        div.addEventListener("click", () => {
+            displayCourseDetails(course);
+        });
+    });
 
     document.querySelector("#creds").innerHTML = courseCredits.reduce(
-        (accumulator, currentValue) => accumulator + currentValue,
-        0,
+        (accumulator, currentValue) => accumulator + currentValue, 0,
     );
+}
+
+function displayCourseDetails(course) {
+    courseDetails.innerHTML = `<h2>${course.subject} ${course.number}</h2><button id="closeModal">⨉</button><h3>${course.title}</h3><p><strong>Credits</strong>: ${course.credits}</p><p><strong>Certificate</strong>: ${course.certificate}</p><p>${course.description}</p><p><strong>Technologies</strong>: ${course.technology.join(", ")}</p>`;
+    courseDetails.showModal();
+
+    closeModal.addEventListener("click", () => {
+        courseDetails.close();
+    });
+
+    window.addEventListener("click", function (event) {
+        if (event.target === courseDetails) {
+            courseDetails.close();
+        }
+    });
 }
