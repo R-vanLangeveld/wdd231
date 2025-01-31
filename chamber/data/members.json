@@ -6,7 +6,7 @@
             "phone": "800-123-4567",
             "siteUrl": "https://r-vanlangeveld.github.io/wdd130/wwr/",
             "icon": "https://placehold.co/100",
-            "level": "3",
+            "level": "3 Gold",
             "tagline": "Join us for a Whitewater Rafting Experience of a Lifetime!"
         },
         {
@@ -15,7 +15,7 @@
             "phone": "801-343-1234",
             "siteUrl": "https://www.lego.com/en-us",
             "icon": "https://placehold.co/100",
-            "level": "2",
+            "level": "2 Silver",
             "tagline": "Build with imagination"
         },
         {
@@ -24,7 +24,7 @@
             "phone": "801-438-1634",
             "siteUrl": "https://www.dominos.com/en/",
             "icon": "https://placehold.co/100",
-            "level": "1",
+            "level": "1 Bronze",
             "tagline": "Feed the power of possible one pizza at a time"
         },
         {
@@ -33,7 +33,7 @@
             "phone": "801-573-8243",
             "siteUrl": "https://www.ups.com/us/en/home",
             "icon": "https://placehold.co/100",
-            "level": "2",
+            "level": "2 Silver",
             "tagline": "Moving our world forward by delivering what matters"
         },
         {
@@ -42,7 +42,7 @@
             "phone": "801-284-4254",
             "siteUrl": "https://www.fedex.com/global/choose-location.html",
             "icon": "https://placehold.co/100",
-            "level": "1",
+            "level": "1 Bronze",
             "tagline": "The world on time"
         },
         {
@@ -51,7 +51,7 @@
             "phone": "801-408-3760",
             "siteUrl": "https://www.pizzahut.com",
             "icon": "https://placehold.co/100",
-            "level": "2",
+            "level": "2 Silver",
             "tagline": "No one outpizzas the hut"
         },
         {
@@ -60,7 +60,7 @@
             "phone": "801-241-1592",
             "siteUrl": "https://www.arbys.com/",
             "icon": "https://placehold.co/100",
-            "level": "1",
+            "level": "1 Bronze",
             "tagline": "Arby's, We Have the Meats!"
         }
     ]

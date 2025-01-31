@@ -1,11 +1,10 @@
 currentyear.innerHTML = new Date().getFullYear();
 lastModified.innerHTML = `Last Modification: ${document.lastModified}`;
 
-const hamButton = document.querySelector('#menu');
-const navigation = document.querySelector('nav');
-hamButton.addEventListener('click', () => {
-    navigation.classList.toggle('open');
-    hamButton.classList.toggle('open');
+const hamButton = document.querySelector("#menu");
+hamButton.addEventListener("click", () => {
+    document.querySelector("nav").classList.toggle("open");
+    hamButton.classList.toggle("open");
 });
 
 const cards = document.querySelector("#cards");
@@ -20,10 +19,9 @@ const displayMembers = (members) => {
         let img = document.createElement("img");
         let div = document.createElement("div");
 
-        companyName.textContent = `${member.name}`;
-        tagLine.textContent = `${member.tagline}`
-        div.innerHTML = `<p><b>ADDRESS:</b> ${member.address}</p><p><b>PHONE:</b> ${member.phone}</p>
-        <p><a href="${member.siteUrl}">${member.name}</a></p><p>Membership level ${member.level}</p>`;
+        companyName.innerHTML = `${member.name}`;
+        tagLine.innerHTML = `${member.tagline}`
+        div.innerHTML = `<p><b>ADDRESS:</b> ${member.address}</p><p><b>PHONE:</b> ${member.phone}</p><p><a href="${member.siteUrl}">${member.name}</a></p><p>${member.level.split(" ")[1]} Membership</p>`;
 
         img.setAttribute("src", member.icon);
         img.setAttribute("alt", `${member.name}'s Logo`);
@@ -64,9 +62,8 @@ if (document.querySelector("#page").textContent === "Directory") {
 }
 else if (document.querySelector("#page").textContent === "Home") {
 
-    const cta = document.querySelector(".cta");
-    hamButton.addEventListener('click', () => {
-        cta.classList.toggle('open');
+    hamButton.addEventListener("click", () => {
+        document.querySelector(".cta").classList.toggle("open");
     });
 
     const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=40.56&lon=-111.93&units=imperial&appid=351e2c8004bccca4128dc54392d01d9a';
@@ -131,7 +128,7 @@ else if (document.querySelector("#page").textContent === "Home") {
     async function getMemberData() {
         const response = await fetch(membersUrl);
         const data = await response.json();
-        const filteredMembers = data.members.filter((member) => parseInt(member.level) >= 2);
+        const filteredMembers = data.members.filter((member) => parseInt(member.level.split(" ")[0]) >= 2);
         const randomMembers = [];
         const usedNumbers = [];
 
@@ -151,4 +148,65 @@ else if (document.querySelector("#page").textContent === "Home") {
     }
 
     getMemberData();
+}
+else if (document.querySelector("#page").textContent === "Join") {
+    
+    document.querySelector(".card1").addEventListener("click", () => {
+        displayDetails("Non Profit", "Free", "idky", "card1");
+    });
+
+    document.querySelector(".card2").addEventListener("click", () => {
+        displayDetails("Bronze", "$10", "idky", "card2");
+    });
+
+    document.querySelector(".card3").addEventListener("click", () => {
+        displayDetails("Silver", "$50", "Can be randomly selected to appear in the Featured Members section. idky", "card3");
+    });
+
+    document.querySelector(".card4").addEventListener("click", () => {
+        displayDetails("Gold", "$100", "Can be randomly selected to appear in the Featured Members section. idky", "card4");
+    });
+
+    function displayDetails(type, price, benifit, card) {
+        memberInfo.innerHTML = `<h2>${type}</h2><button id="closeModal">⨉</button><p><strong>Price</strong>: ${price}</p><p><strong>Benifits</strong>: ${benifit}</p>`;
+        memberInfo.classList.add(`${card}`);
+        memberInfo.showModal();
+
+        closeModal.addEventListener("click", () => {
+            memberInfo.classList.remove(`${card}`);
+            memberInfo.close();
+        });
+
+        window.addEventListener("click", function (event) {
+            if (event.target === memberInfo) {
+                memberInfo.classList.remove(`${card}`);
+                memberInfo.close();
+            }
+        });
+    }
+}
+else if (document.querySelector("#page").textContent === "Thanks") {
+
+    function show(cup) {
+        window.location.href.split("?")[1].split("&").forEach((element) => {
+            if (element.startsWith(cup)) {
+                result = element.split("=")[1].replace("%40", "@").replaceAll("+", " ");
+                if (result === "np") {
+                    result = `Non Profit`;
+                }
+                else if (result === "1") {
+                    result = `1 Bronze`;
+                }
+                else if (result === "2") {
+                    result = `2 Silver`;
+                }
+                else if (result === "3") {
+                    result = `3 Gold`;
+                }
+            }
+        });
+        return result;
+    }
+
+    document.querySelector("#results").innerHTML = `<p>${show("first")} ${show("last")}, a ${show("title")}, is signing up ${show("organization")} for a ${show("level")} Level Membership</p><p></p><p>Your Phone: ${show("phone")}</p><p>Your Email: <a href="${show("email")}">${show("email")}</a></p><p>${show("description")}</p><p>${show("timestamp")}</p>`;
 }
