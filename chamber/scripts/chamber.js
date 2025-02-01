@@ -150,21 +150,23 @@ else if (document.querySelector("#page").textContent === "Home") {
     getMemberData();
 }
 else if (document.querySelector("#page").textContent === "Join") {
-    
+
+    document.querySelector("#timestamp").setAttribute("value", Date.now());
+
     document.querySelector(".card1").addEventListener("click", () => {
-        displayDetails("Non Profit", "Free", "idky", "card1");
+        displayDetails("Non Profit", "Free", "Companies with a Non Profit Membership have access to all general events.", "card1");
     });
 
     document.querySelector(".card2").addEventListener("click", () => {
-        displayDetails("Bronze", "$10", "idky", "card2");
+        displayDetails("Bronze", "$250", "Companies with a Bronze Membership have access to all general events and can choose one Silver event to go to each year.", "card2");
     });
 
     document.querySelector(".card3").addEventListener("click", () => {
-        displayDetails("Silver", "$50", "Can be randomly selected to appear in the Featured Members section. idky", "card3");
+        displayDetails("Silver", "$500", "Companies with a sivler Membership can be randomly selected to appear in the Featured Members section. Companies with a Silver Membership have access to all general events and Silver events and can choose one Gold event to go to each year.", "card3");
     });
 
     document.querySelector(".card4").addEventListener("click", () => {
-        displayDetails("Gold", "$100", "Can be randomly selected to appear in the Featured Members section. idky", "card4");
+        displayDetails("Gold", "$1000", "Companies with a Gold Membership can be randomly selected to appear in the Featured Members section. Companies with a Gold Membership have access to all general events and exclusive Gold Member events.", "card4");
     });
 
     function displayDetails(type, price, benifit, card) {
@@ -195,18 +197,18 @@ else if (document.querySelector("#page").textContent === "Thanks") {
                     result = `Non Profit`;
                 }
                 else if (result === "1") {
-                    result = `1 Bronze`;
+                    result = `Bronze`;
                 }
                 else if (result === "2") {
-                    result = `2 Silver`;
+                    result = `Silver`;
                 }
                 else if (result === "3") {
-                    result = `3 Gold`;
+                    result = `Gold`;
                 }
             }
         });
         return result;
     }
 
-    document.querySelector("#results").innerHTML = `<p>${show("first")} ${show("last")}, a ${show("title")}, is signing up ${show("organization")} for a ${show("level")} Level Membership</p><p></p><p>Your Phone: ${show("phone")}</p><p>Your Email: <a href="${show("email")}">${show("email")}</a></p><p>${show("description")}</p><p>${show("timestamp")}</p>`;
+    document.querySelector("#results").innerHTML = `<p>${show("first")} ${show("last")}, a ${show("title")}, is signing up ${show("organization")} for a ${show("level")} Level Membership</p><p>Your Email: <a href="${show("email")}">${show("email")}</a></p><p>Your Phone: ${show("phone")}</p><p>${show("description")}</p><p>${Date(show("timestamp"))}</p>`;
 }

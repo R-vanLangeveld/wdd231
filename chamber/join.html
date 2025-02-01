@@ -14,7 +14,7 @@
     <meta property="og:description"
         content="The join page contains a form to the Chamber of Commerce and details about the membership levels">
     <meta property="og:image" content="https://r-vanlangeveld.github.io/wdd231/images/south-jordan-utah.jpg">
-    <meta property="og:url" content="https://r-vanlangeveld.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://r-vanlangeveld.github.io/wdd231/chamber/join.html">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,12 +43,12 @@
 
     <main>
         <h2 id="page">Join</h2>
-        <form action="thankyou.html" method="get">
+        <form action="https://r-vanlangeveld.github.io/wdd231/chamber/thankyou.html" method="get">
             <fieldset>
                 <legend>Your Information</legend>
                 <label>First Name <input type="text" name="first" required autocomplete="given-name"></label>
                 <label>Last Name <input type="text" name="last" required autocomplete="family-name"></label>
-                <label>Title <input type="text" name="title" required autocomplete="organization-title"pattern="[A-Za-z0-9 \-]{7,}"></label>
+                <label>Title <input type="text" name="title" required autocomplete="organization-title" pattern="[A-Za-z0-9 \-]{7,}"></label>
                 <label>Email <input type="email" name="email" required autocomplete="email" placeholder="example@gmail.com"></label>
                 <label>Cell Phone <input type="tel" name="phone" required autocomplete="tel" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"></label>
             </fieldset>

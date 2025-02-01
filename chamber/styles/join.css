@@ -1,16 +1,9 @@
-
-
-
 .cards {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     text-align: center;
     margin: 2px;
 }
 
 .cards section {
-    display: block;
     background-color: #fff;
     min-width: 290px;
 }
@@ -18,30 +11,24 @@
 .card1 h3, .card1 h2 {
     background-color: #337ca0;
     animation: 4s linear 375ms shimmer 2;
-    /* animation: 4s linear 375ms shimmer infinite; */
 }
 
 .card2 h3, .card2 h2 {
     background-color: #cd7f32;
     animation: 4s linear 250ms shimmer 2;
-    /* animation: 4s linear 250ms shimmer infinite; */
 }
 
 .card3 h3, .card3 h2 {
     background-color: #c0c0c0;
     animation: 4s linear 125ms shimmer 2;
-    /* animation: 4s linear 125ms shimmer infinite; */
 }
 
 .card4 h3, .card4 h2 {
     background-color: #d4af37;
     animation: 4s linear shimmer 2;
-    /* animation: 4s linear shimmer infinite; */
 }
 
 @keyframes shimmer {
-    /* even shorter? longer break? started at 5% went to 2.5% then 1.25%, now to 0.625%? */
-    /* .625 1.25 1.875 2.5 3.125 3.75 4.375 5 */
     from {
         background-image: linear-gradient(65deg, #fff0, 0%, #fffa, 5%, #fff0);
     }
@@ -149,11 +136,16 @@ input, select, textarea {
     background-color: #fff;
 }
 
-:required {
+input:focus, select:focus, textarea:focus {
+    border: 4px solid #337ca0;
+    padding: 3px;
+}
+
+:required, :required:focus {
     border-left: red solid 8px;
 }
 
-:required:valid {
+:required:valid, :required:valid:focus {
     border-left: green solid 8px;
 }
 
@@ -217,5 +209,9 @@ dialog button {
         min-width: 230px;
         width: 100%;
         margin-right: 0;
+    }
+
+    .cards section {
+        min-width: 200px;
     }
 }
