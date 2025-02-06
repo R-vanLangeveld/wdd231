@@ -1,0 +1,230 @@
+:root {
+    --primary-color: #ff8c00;
+    --secondary-color: #2892d7;
+    --accent-color: #d7cf07;
+    --heading-font: "Roboto Slab", serif;
+    --paragraph-font: "Roboto", sans-serif;
+    --border: var(--accent-color) thin solid;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--paragraph-font);
+}
+
+/* ------------------------ siteplan only, don't copy to base.css ------------------------ */
+.headingFont {font-family: var(--heading-font);}
+.bodyFont {font-family: var(--paragraph-font);}
+.colorOne {background-color: var(--primary-color); color: #000;}
+.colorTwo {background-color: var(--secondary-color); color: #000;}
+.colorThree {background-color: var(--accent-color); color: #000;}
+.hoverA.lightMode {text-decoration: underline double 2px #0a0dab;}
+.visitedA.lightMode {color: #206; text-decoration: underline wavy 2px #551a8b;}
+.hoverA {text-decoration: underline double 2px #3fe;}
+.visitedA {color: #daf200;text-decoration: underline wavy 2px #daf200;}
+.wireframe {border: var(--border);}
+.wireframe .lightMode {border-color: #000;}
+/* ----------------------------------- end of siteplan ----------------------------------- */
+
+main {
+    background-color: #333;
+    color: #eee;
+    padding: 5px;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 70px auto auto;
+    background-color: var(--primary-color);
+    min-height: 70px;
+    max-height: 210px;
+}
+
+#light.lightMode, .lightMode {
+    color: #000;
+    border-color: #000;
+}
+
+#light.lightMode, main.lightMode {
+    background-color: #eee;
+}
+
+#light.lightMode {
+    border-style: inset;
+}
+
+#light {
+    width: 70px;
+    font-size: 1.5rem;
+    background-color: #333;
+    color: #eee;
+    border: #eee 3px outset;
+}
+
+#menu {
+    grid-column: 3/4;
+    font-size: 1.5rem;
+    justify-self: end;
+    background: none;
+    border: none;
+    width: 70px;
+    height: 70px;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "⨉";
+}
+
+nav {
+    grid-row: 2/3;
+    grid-column: 1/4;
+    display: grid;
+    grid-template-rows: 0fr;
+    background-color: #aaa;
+    transition: grid-template-rows 0.5s ease-out;
+}
+
+nav ul {
+    display: none;
+    list-style-type: none;
+}
+
+nav.open {
+    padding: 2px 0;
+    grid-template-rows: 1fr;
+}
+
+nav.open ul {
+    padding: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+nav ul a, a.lightMode {
+    color: #007;
+}
+
+nav ul a:hover, a:hover.lightMode {
+    text-decoration: underline double 2px #0a0dab;
+}
+
+nav ul a:visited, a:visited.lightMode {
+    color: #206;
+    text-decoration: underline wavy 2px #551a8b;
+}
+
+a {
+    padding: 3px 0;
+    color: #00f2f2;
+}
+
+a:hover {
+    text-decoration: underline double 2px #3fe;
+}
+
+a:visited {
+    color: #daf200;
+    text-decoration: underline wavy 2px #daf200;
+}
+
+:focus-visible {
+    border-radius: .3rem;
+    outline-color: #dc143c;
+}
+
+h1, h2, h3 {
+    font-family: var(--heading-font);
+}
+
+h1 {
+    align-self: center;
+    margin: auto 5px;
+}
+
+h2, h3 {
+    background-color: var(--secondary-color);
+    color: #000;
+    padding: 2px;
+    margin: 0 0 5px;
+}
+
+p {
+    margin: 5px;
+}
+
+section, div {
+    margin: 5px;
+    border: var(--border);
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    text-align: center;
+    margin: 5px;
+}
+
+footer {
+    background-color: var(--primary-color);
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.social {
+    margin: 0;
+    display: flex;
+    background-color: transparent;
+    justify-content: space-evenly;
+    align-items: center;
+    align-self: center;
+    width: 230px;
+    height: 80px;
+    border: none;
+}
+
+.social a {
+    padding: 0;
+    height: 70px;
+}
+
+@media screen and (min-width: 500px) {
+
+    #menu {
+        display: none;
+    }
+
+    nav {
+        grid-column: 3/4;
+        grid-row: 1;
+        padding: 5px;
+        grid-template-rows: 1fr;
+        background-color: transparent;
+        height: 70px;
+    }
+
+    nav ul, nav.open ul {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        align-self: center;
+        padding: 10px;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 230px auto;
+    }
+}

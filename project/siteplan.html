@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Site Plan</title>
+    <meta name="description" content="The site plan for Ryndee's WDD231 project">
+    <meta name="author" content="Ryndee van Langeveld">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/siteplan.css">
+    <script src="scripts/siteplan.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <button id="light" title="Light Mode">◑</button>
+        <h1>Siteplan</h1>
+        <button id="menu" title="Nav Menu"></button>
+        <nav>
+            <ul>
+                <li><a href="#" title="Home">Home</a></li>
+                <li><a href="#" title="Page1">Page1</a></li>
+                <li><a href="#" title="Page With Form">Page With Form</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Resources to Help Struggling Teens</h2>
+            <p>The name discribes what the site is for.<br>If you think that "Resources to Help Struggling Teens" is to long to type out, you can call it "RtHST" instead.<br>Domain Name: rthst.org</p>
+            <figure>
+                <img src="favicon.ico" alt="the favicon" width="96" height="96">
+                <figcaption>4 times larger so you can see it easier</figcaption>
+            </figure>
+        </section>
+        <section>
+            <h2>Site Purpose</h2>
+            <p>To provide information and resources that can help struggling teens.<br>There will be links to various websites like The Trevor Project.</p>
+        </section>
+        <section>
+            <h2>Scenarios</h2>
+            <p>Target audience: Teens and people who want to help struggling teens.<br>Does this site only have things that help struggling teens, or can it help other people?<br>I've been kicked out of my home, can this site help me find somewhere safe to stay?</p>
+        </section>
+        <section>
+            <h2>Color Schema</h2>
+            <div class="colorOne">
+                <p>Primary color: #ff8c00</p>
+                <p>Header & Footer background color</p>
+            </div>
+            <div class="colorTwo">
+                <p>Secondary color: #2892d7</p>
+                <p>headings background color</p>
+            </div>
+            <div class="colorThree">
+                <p>Accent color: #d7cf07</p>
+                <p>Dark Mode Borders</p>
+            </div>
+            <div>
+                <p>Link Colors: #00f2f2, #007<br><a href="#">This changes color when the Light Mode button is clicked</a></p>
+                <p>Link Hover Colors: #3fe, #0a0dab<br><a href="#" class="hoverA">This changes color when the Light Mode button is clicked</a></p>
+                <p>Link Visited Colors: (#daf200, #daf200), (#206, #551a8b)<br><a href="#" class="visitedA">This changes color when the Light Mode button is clicked</a></p>
+            </div>
+        </section>
+        <section>
+            <h2>Typography</h2>
+            <p class="headingFont">Heading Font: "Roboto Slab", serif</p>
+            <p class="bodyFont">Everything Else Font: "Roboto", sans-serif</p>
+        </section>
+        <section>
+            <h2>Wireframes</h2>
+            <p>The wireframes only have things I know I will have, so the widescreen looks extremely empty</p>
+            <figure class="wireframe">
+                <img src="images/widescreen.png" alt="wide screen" width="610" height="791" loading="lazy">
+                <figcaption>Widescreen view</figcaption>
+            </figure>
+            <figure class="wireframe">
+                <img src="images/smallscreen.png" alt="small screen" width="378" height="791" loading="lazy">
+                <figcaption>Smallscreen view</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social">
+            <a href="https://github.com/R-vanLangeveld"><img src="images/github_icon.svg" alt="GitHub" width="70" height="70"></a>
+            <a href="https://facebook.com"><img src="images/facebook_icon.svg" alt="Facebook" width="70" height="70"></a>
+            <a href="https://www.linkedin.com/feed/"><img src="images/linkedin_icon.svg" alt="LinkedIn" width="70" height="70"></a>
+        </div>
+        <p>WDD231 Class Project Siteplan<br>&copy;<span id="currentyear"></span> Ryndee van Langeveld<br><span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>
