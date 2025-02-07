@@ -37,7 +37,7 @@ const displayMembers = (members) => {
     });
 }
 
-if (document.querySelector("#page").textContent === "Directory") {
+if (document.querySelector("h1").textContent === "Directory") {
 
     async function getMemberData() {
         const response = await fetch(membersUrl);
@@ -60,7 +60,7 @@ if (document.querySelector("#page").textContent === "Directory") {
         cards.classList.remove("cards");
     });
 }
-else if (document.querySelector("#page").textContent === "Home") {
+else if (document.querySelector("h1").textContent === "Home") {
 
     hamButton.addEventListener("click", () => {
         document.querySelector(".cta").classList.toggle("open");
@@ -149,7 +149,7 @@ else if (document.querySelector("#page").textContent === "Home") {
 
     getMemberData();
 }
-else if (document.querySelector("#page").textContent === "Join") {
+else if (document.querySelector("h1").textContent === "Join") {
 
     document.querySelector("#timestamp").setAttribute("value", Date.now());
 
@@ -187,7 +187,7 @@ else if (document.querySelector("#page").textContent === "Join") {
         });
     }
 }
-else if (document.querySelector("#page").textContent === "Thanks") {
+else if (document.querySelector("h1").textContent === "Thank You") {
 
     function show(cup) {
         window.location.href.split("?")[1].split("&").forEach((element) => {
@@ -211,4 +211,9 @@ else if (document.querySelector("#page").textContent === "Thanks") {
     }
 
     document.querySelector("#results").innerHTML = `<p>${show("first")} ${show("last")}, a ${show("title")}, is signing up ${show("organization")} for a ${show("level")} Level Membership</p><p>Your Email: <a href="${show("email")}">${show("email")}</a></p><p>Your Phone: ${show("phone")}</p><p>${show("description")}</p><p>${Date(show("timestamp"))}</p>`;
+}
+else if (document.querySelector("h1").textContent === "Discover") {
+
+
+    
 }

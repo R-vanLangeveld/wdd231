@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber of Commerce Discover</title>
+    <meta name="description" content="WDD 231 - Front End Development I - Chamber of Commerce Discover - Ryndee van Langeveld">
+    <meta name="author" content="Ryndee van Langeveld">
+    <link rel="icon" href="favicon.ico">
+    <meta property="og:title" content="Chamber of Commerce Discover">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="The discover page contains">
+    <meta property="og:image" content="https://r-vanlangeveld.github.io/wdd231/images/south-jordan-utah.jpg">
+    <!-- <meta property="og:url" content="https://r-vanlangeveld.github.io/wdd231/chamber/discover.html"> -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto&text=aAbBcCdDeEfFgGhHiJlLmMnNoOpPqrRsStTuUvVwWxyz-,':!1234567890&family=Roboto+Slab&text=aAbcdDeEfFghHiJLmMnoPqrRsStuUvVwWxyz'&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="styles/chamber.css">
+    <link rel="stylesheet" href="styles/discover.css">
+    <script src="scripts/chamber.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/utah-flag.jpg" alt="The state flag of Utah" width="100" height="60">
+        <h1>Discover</h1>
+        <button id="menu" title="Nav Menu"></button>
+        <nav>
+            <ul>
+                <li><a href="https://r-vanlangeveld.github.io/wdd231/chamber/index.html" title="Home">Home</a></li>
+                <li><a href="https://r-vanlangeveld.github.io/wdd231/chamber/directory.html" title="Directory">Directory</a></li>
+                <li><a href="https://r-vanlangeveld.github.io/wdd231/chamber/join.html" title="Join">Join</a></li>
+                <li><a href="" title="Discover" class="active">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="sidebar">
+            <p>Using localStorage to store the last visit date by the client, display one of three possible messages about the time between page visits in the sidebar content area.</p>
+            <p>(first visit) Welcome!</p>
+            <p>(same day visit) It's nice to see you again so soon!</p>
+            <p>(at least 1 day after previous visit) Welcome back! Your last visit was ${number} days ago.</p>
+        </div>
+        <section class="card">
+            <h2>Loveland Living Planet Aquarium</h2>
+            <figure>
+                <img src="images/loveland-living-planet-aquarium.webp" alt="" width="300" height="200">
+            </figure>
+            <address>12033 Lone Peak Pkwy, Draper, UT 84020</address>
+            <p>Airy facility with marine-life displays of 2,400+ animals including penguins, seahorses & stingrays.</p>
+            <button class="learn">learn more</button>
+        </section>
+        <section class="card">
+            <h2>Social Axe Throwing SLC</h2>
+            <figure>
+                <img src="images/social-axe-throwing.webp" alt="" width="300" height="200">
+            </figure>
+            <address>1154 S 300 W, Salt Lake City, UT</address>
+            <p>Amusement center featuring ax throwing, bowling, a bar, and outside food options.</p>
+            <button class="learn">learn more</button>
+        </section>
+        <section class="card">
+            <h2>A Great Escape at Gardner Village</h2>
+            <figure>
+                <img src="images/great-escape-gardner-village.webp" alt="" width="300" height="200">
+            </figure>
+            <address>1100 W 7800 S #3, West Jordan, UT 84088</address>
+            <p>Puzzles, mind tricks, and other obstacles stand in the way of escape at this activity center.</p>
+            <button class="learn">learn more</button>
+        </section>
+        <section class="card">
+            <h2>Smash Labs Rage Rooms & Axe Throwing</h2>
+            <figure>
+                <img src="images/smash-labs.webp" alt="" width="300" height="200">
+            </figure>
+            <address>175 W 900 S STE 12, St. George, UT 84770</address>
+            <p>Visitors to this entertainment center can book a session to break objects in a rage room, or try their hand at axe throwing.</p>
+            <button class="learn">learn more</button>
+        </section>
+        <section class="card">
+            <h2>Hill Aerospace Museum</h2>
+            <figure>
+                <img src="images/aerospace-museum.webp" alt="" width="300" height="200" loading="lazy">
+            </figure>
+            <address>7961 Cottonwood St Building 1955, Hill AFB, UT 84056</address>
+            <p>Free attraction displaying planes, missiles & aerospace gear, plus exhibits on Air Force history.</p>
+            <button class="learn">learn more</button>
+        </section>
+        <section class="card">
+            <h2>Alta Ski Area</h2>
+            <figure>
+                <img src="images/alta.webp" alt="" width="300" height="200" loading="lazy">
+            </figure>
+            <address>Alta, UT 884092</address>
+            <p>Known for deep powder snow, this longtime skiing area offers a wide variety of terrains.</p>
+            <button class="learn">learn more</button>
+        </section>
+        <section class="card">
+            <h2>Thanksgiving Point</h2>
+            <figure>
+                <img src="images/thanksgiving-point.webp" alt="" width="300" height="200" loading="lazy">
+            </figure>
+            <address>3003 Thanksgiving Wy, Lehi, UT 84043</address>
+            <p>Nonprofit complex housing gardens, an interactive farm, cafes, shops & the Museum of Ancient Life.</p>
+            <button class="learn">learn more</button>
+        </section>
+        <section class="card">
+            <h2>Salt Lake City Puplic Library</h2>
+            <figure>
+                <img src="images/slc-public-library.webp" alt="" width="300" height="200" loading="lazy">
+            </figure>
+            <address>210 E 400 S, Salt Lake City, UT 84111</address>
+            <p>Modern library known for its natural light & curved 6-story walkable wall built with high-UV glass.</p>
+            <button class="learn">learn more</button>
+        </section>
+    </main>
+
+    <footer>
+        <p><b>Utah Chamber of Commerce</b><br>address<br>info@utahcc.org<br>(801) 397-6821</p>
+        <div class="social">
+            <a href="https://github.com/R-vanLangeveld"><img src="images/github_icon.svg" alt="GitHub" width="70" height="70"></a>
+            <a href="https://facebook.com"><img src="images/facebook_icon.svg" alt="Facebook" width="70" height="70"></a>
+            <a href="https://www.linkedin.com/feed/"><img src="images/linkedin_icon.svg" alt="LinkedIn" width="70" height="70"></a>
+        </div>
+        <p>WDD231 Class Project<br>Ryndee van Langeveld<br>&copy;<span id="currentyear"></span> Utah Chamber of Commerce<br><span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>

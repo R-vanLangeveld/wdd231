@@ -23,24 +23,27 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--paragraph-font);
 }
 
 header {
     display: grid;
-    grid-template-columns: 110px auto auto;
+    grid-template-columns: 110px minmax(140px, 170px) 1fr;
     background-color: var(--primary-color);
     min-height: 70px;
     max-height: 210px;
+    color: #fff;
 }
 
 header img {
-    margin: 4px;
+    width: 102px;
+    height: 62px;
+    margin: auto;
     border: var(--border);
 }
 
-header h1 {
-    color: #fff;
-    margin: 5px 0;
+h1 {
+    margin: auto;
     align-self: center;
     justify-self: start;
     grid-column: 2/3;
@@ -53,8 +56,7 @@ header h1 {
     background: none;
     border: none;
     color: #fff;
-    min-width: 50px;
-    max-width: 100px;
+    width: 70px;
     height: 70px;
 }
 
@@ -78,8 +80,6 @@ nav {
 nav ul {
     display: none;
     list-style-type: none;
-    padding: 0;
-    margin: 0;
 }
 
 nav.open {
@@ -97,7 +97,6 @@ nav.open ul {
 a {
     color: #1d2db6;
     text-decoration: underline 2px #1d2db6;
-    font-family: var(--paragraph-font);
 }
 
 a:hover {
@@ -113,36 +112,42 @@ li {
     margin: 5px;
 }
 
-li a {
+nav ul li a, footer a {
     font-family: var(--heading-font);
     color: #fff;
     font-size: large;
     text-decoration: none;
 }
 
-li a:visited {
+nav ul li a:visited, footer a:visited {
     color: #37bde6;
 }
 
-li a.active {
+nav ul li a.active {
     color: #ffd700;
     text-decoration: underline 2px #ffd700;
 }
 
-li a:hover {
+nav ul li a.active:hover {
+    color: #ffd700;
+    text-decoration: underline 2px #7fffd4;
+}
+
+nav ul li a:hover, footer a:hover {
     color: #fff;
     text-decoration: underline 2px #7fffd4;
 }
 
-h1,
-h2,
-h3,
-nav {
+main {
+    background-color: #eee;
+}
+
+h1, h2, h3, nav {
     font-family: var(--heading-font);
 }
 
-body {
-    font-family: var(--paragraph-font);
+:focus-visible {
+    outline-color: #00b7ff;
 }
 
 section {
@@ -150,21 +155,15 @@ section {
     margin: 5px;
     border: var(--border);
     border-radius: 0.5rem;
+    overflow: hidden;
 }
 
 p {
     padding: 4px;
 }
 
-h2,
-h3 {
-    margin: 0;
+h2, h3 {
     padding: 5px 5px 6px;
-    border-radius: 0.45rem;
-}
-
-section li {
-    padding: 5px;
 }
 
 section h2 {
@@ -200,6 +199,15 @@ footer p {
 
 @media screen and (min-width: 500px) {
 
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 590px) {
+
     #menu {
         display: none;
     }
@@ -213,17 +221,10 @@ footer p {
         height: 70px;
     }
 
-    nav ul,
-    nav.open ul {
+    nav ul, nav.open ul {
         display: flex;
         justify-content: space-around;
         flex-direction: row;
         margin: 16px 0;
-    }
-
-    footer {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
     }
 }

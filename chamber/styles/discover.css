@@ -1,0 +1,102 @@
+.card {
+    min-width: 310px;
+    border-radius: 1rem;
+}
+
+figure {
+    height: 200px;
+    margin: 4px;
+}
+
+address, p {
+    margin: 4px;
+    padding: 0;
+}
+
+.sidebar {
+    background-color: #f5f5dc;
+}
+
+.learn {
+    height: 50px;
+    max-width: 1025px;
+    width: 98%;
+    margin: 5px 1%;
+    border-radius: 1.8rem;
+}
+
+.learn:hover {
+    background-color: #ddd;
+}
+
+@media screen and (min-width: 640px) {
+
+    main {
+        display: grid;
+        grid-template-areas: "a b" "c b" "d b" "e b" "f b" "g b" "h b" "i b";
+    }
+
+    .sidebar {
+        grid-area: b;
+    }
+
+    .card {
+        min-width: 510px;
+        display: grid;
+        grid-template-columns: 308px auto;
+        grid-template-rows: min-content;
+        grid-template-areas: "a1 a1" "b1 c1" "b1 d1" "e1 e1";
+    }
+
+    h2 {
+        grid-area: a1;
+    }
+
+    figure {
+        height: 208px;
+        margin: 0 4px;
+        justify-self: start;
+        grid-area: b1;
+    }
+
+    .learn {
+        grid-area: e1;
+    }
+
+    figure img {
+        margin: 1px 0 7px;
+    }
+    
+    figure img:hover {
+        box-shadow: 0 0 10px;
+        animation: linear 1s downAndUp infinite;
+    }
+
+    @keyframes downAndUp {
+        from {
+            margin: 1px 0 7px;
+        }
+        50% {
+            margin: 7px 0 1px;
+        }
+        to {
+            margin: 1px 0 7px;
+        }
+    }
+
+}
+
+@media screen and (min-width: 1025px) {
+
+    main {
+        grid-template-areas: "a b c" "d e c" "f g c" "h i c";
+    }
+
+    .sidebar {
+        grid-area: c;
+    }
+
+    .card {
+        min-width: 400px;
+    }
+}

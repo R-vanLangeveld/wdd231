@@ -3,9 +3,14 @@
     margin: 2px;
 }
 
+section {
+    margin-left: 0;
+}
+
 .cards section {
-    background-color: #fff;
+    background-color: #eee;
     min-width: 290px;
+    margin: 5px auto;
 }
 
 .card1 h3, .card1 h2 {
@@ -133,12 +138,11 @@ input, select, textarea {
     width: 100%;
     padding: 5px;
     appearance: none;
-    background-color: #fff;
+    background-color: #eee;
 }
 
 input:focus, select:focus, textarea:focus {
-    border: 4px solid #337ca0;
-    padding: 3px;
+    outline-color: #00b7ff;
 }
 
 :required, :required:focus {
@@ -158,7 +162,7 @@ input[type="submit"] {
 }
 
 dialog {
-    background-color: #fff;
+    background-color: #eee;
     border: #4d4d4d 3px solid;
     border-radius: 0.5rem;
     max-width: 600px;
@@ -168,12 +172,10 @@ dialog {
 
 dialog p {
     padding: 10px;
-    border-radius: 0;
 }
 
 dialog h2 {
     padding: 15px 10px;
-    border-radius: 0;
 }
 
 ::backdrop {
@@ -192,7 +194,7 @@ dialog button {
     height: 50px;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 640px) {
 
     main {
         display: grid;
