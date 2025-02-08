@@ -5,7 +5,7 @@
             "address": "100 N Johnson Mill Rd Midway, UT 84049",
             "phone": "800-123-4567",
             "siteUrl": "https://r-vanlangeveld.github.io/wdd130/wwr/",
-            "icon": "https://placehold.co/100",
+            "icon": "https://r-vanlangeveld.github.io/wdd130/wwr/images/logo.png",
             "level": "3 Gold",
             "tagline": "Join us for a Whitewater Rafting Experience of a Lifetime!"
         },
@@ -14,7 +14,7 @@
             "address": "123 Main Street",
             "phone": "801-343-1234",
             "siteUrl": "https://www.lego.com/en-us",
-            "icon": "https://placehold.co/100",
+            "icon": "https://assets.lego.com/logos/v4.5.0/brand-lego.svg",
             "level": "2 Silver",
             "tagline": "Build with imagination"
         },
@@ -23,7 +23,7 @@
             "address": "465 Main Street",
             "phone": "801-438-1634",
             "siteUrl": "https://www.dominos.com/en/",
-            "icon": "https://placehold.co/100",
+            "icon": "https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/052013/dominos_logo.png?itok=PwCTcwtP",
             "level": "1 Bronze",
             "tagline": "Feed the power of possible one pizza at a time"
         },
@@ -32,7 +32,7 @@
             "address": "836 North Temple",
             "phone": "801-573-8243",
             "siteUrl": "https://www.ups.com/us/en/home",
-            "icon": "https://placehold.co/100",
+            "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/United_Parcel_Service_logo_2014.svg/1200px-United_Parcel_Service_logo_2014.svg.png",
             "level": "2 Silver",
             "tagline": "Moving our world forward by delivering what matters"
         },
@@ -41,7 +41,7 @@
             "address": "789 Center Street",
             "phone": "801-284-4254",
             "siteUrl": "https://www.fedex.com/global/choose-location.html",
-            "icon": "https://placehold.co/100",
+            "icon": "data:image/png;base64,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",
             "level": "1 Bronze",
             "tagline": "The world on time"
         },
@@ -50,7 +50,7 @@
             "address": "492 Redwood Road",
             "phone": "801-408-3760",
             "siteUrl": "https://www.pizzahut.com",
-            "icon": "https://placehold.co/100",
+            "icon": "https://static.wikia.nocookie.net/logo-timeline/images/e/ec/CG16913LOGO-b_0.jpeg/revision/latest?cb=20190702040334",
             "level": "2 Silver",
             "tagline": "No one outpizzas the hut"
         },
@@ -59,7 +59,7 @@
             "address": "976 South Temple",
             "phone": "801-241-1592",
             "siteUrl": "https://www.arbys.com/",
-            "icon": "https://placehold.co/100",
+            "icon": "https://www.wendys.com/themes/custom/wendys_main/wendys-logo.svg",
             "level": "1 Bronze",
             "tagline": "Arby's, We Have the Meats!"
         }
