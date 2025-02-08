@@ -51,21 +51,42 @@ section li {
     margin: 5px;
     padding: 10px;
     position: absolute;
-    top: 70px;
+    top: 144px;
     width: fit-content;
 }
 
 .cta.open {
     animation: 500ms down ease-out;
-    top: 190px;
+    top: 270px;
 }
 
 @keyframes down {
     from {
-        top: 70px;
+        top: 144px;
     }
     to {
-        top: 190px;
+        top: 270px;
+    }
+}
+
+@media screen and (min-width: 443px) {
+    
+    .cta {
+        top: 108px;
+    }
+
+    .cta.open {
+        animation: 500ms down ease-out;
+        top: 234px;
+    }
+
+    @keyframes down {
+        from {
+            top: 108px;
+        }
+        to {
+            top: 234px;
+        }
     }
 }
 
@@ -76,7 +97,7 @@ section li {
         grid-template-columns: 2fr 1fr 1fr;
     }
 
-    .hero, h2, #cards, #members {
+    h1, .hero, .gridList, #cards, #members {
         grid-column: 1/4;
     }
 }

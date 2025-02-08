@@ -37,7 +37,7 @@ const displayMembers = (members) => {
     });
 }
 
-if (document.querySelector("h1").textContent === "Directory") {
+if (document.querySelector("h1").textContent === "Chamber of Commerce Directory") {
 
     async function getMemberData() {
         const response = await fetch(membersUrl);
@@ -60,7 +60,7 @@ if (document.querySelector("h1").textContent === "Directory") {
         cards.classList.remove("cards");
     });
 }
-else if (document.querySelector("h1").textContent === "Home") {
+else if (document.querySelector("h1").textContent === "Chamber of Commerce Home") {
 
     hamButton.addEventListener("click", () => {
         document.querySelector(".cta").classList.toggle("open");
@@ -149,25 +149,13 @@ else if (document.querySelector("h1").textContent === "Home") {
 
     getMemberData();
 }
-else if (document.querySelector("h1").textContent === "Join") {
+else if (document.querySelector("h1").textContent === "Chamber of Commerce Join") {
 
     document.querySelector("#timestamp").setAttribute("value", Date.now());
-
-    document.querySelector(".card1").addEventListener("click", () => {
-        displayDetails("Non Profit", "Free", "Companies with a Non Profit Membership have access to all general events.", "card1");
-    });
-
-    document.querySelector(".card2").addEventListener("click", () => {
-        displayDetails("Bronze", "$250", "Companies with a Bronze Membership have access to all general events and can choose one Silver event to go to each year.", "card2");
-    });
-
-    document.querySelector(".card3").addEventListener("click", () => {
-        displayDetails("Silver", "$500", "Companies with a sivler Membership can be randomly selected to appear in the Featured Members section. Companies with a Silver Membership have access to all general events and Silver events and can choose one Gold event to go to each year.", "card3");
-    });
-
-    document.querySelector(".card4").addEventListener("click", () => {
-        displayDetails("Gold", "$1000", "Companies with a Gold Membership can be randomly selected to appear in the Featured Members section. Companies with a Gold Membership have access to all general events and exclusive Gold Member events.", "card4");
-    });
+    document.querySelector(".card1").addEventListener("click", () => {displayDetails("Non Profit", "Free", "Companies with a Non Profit Membership have access to all general events.", "card1");});
+    document.querySelector(".card2").addEventListener("click", () => {displayDetails("Bronze", "$250", "Companies with a Bronze Membership have access to all general events and can choose one Silver event to go to each year.", "card2");});
+    document.querySelector(".card3").addEventListener("click", () => {displayDetails("Silver", "$500", "Companies with a sivler Membership can be randomly selected to appear in the Featured Members section. Companies with a Silver Membership have access to all general events and Silver events and can choose one Gold event to go to each year.", "card3");});
+    document.querySelector(".card4").addEventListener("click", () => {displayDetails("Gold", "$1000", "Companies with a Gold Membership can be randomly selected to appear in the Featured Members section. Companies with a Gold Membership have access to all general events and exclusive Gold Member events.", "card4");});
 
     function displayDetails(type, price, benifit, card) {
         memberInfo.innerHTML = `<h2>${type}</h2><button id="closeModal">⨉</button><p><strong>Price</strong>: ${price}</p><p><strong>Benifits</strong>: ${benifit}</p>`;
@@ -187,7 +175,7 @@ else if (document.querySelector("h1").textContent === "Join") {
         });
     }
 }
-else if (document.querySelector("h1").textContent === "Thank You") {
+else if (document.querySelector("h1").textContent === "Thank You For Joining") {
 
     function show(cup) {
         window.location.href.split("?")[1].split("&").forEach((element) => {
@@ -212,8 +200,32 @@ else if (document.querySelector("h1").textContent === "Thank You") {
 
     document.querySelector("#results").innerHTML = `<p>${show("first")} ${show("last")}, a ${show("title")}, is signing up ${show("organization")} for a ${show("level")} Level Membership</p><p>Your Email: <a href="${show("email")}">${show("email")}</a></p><p>Your Phone: ${show("phone")}</p><p>${show("description")}</p><p>${Date(show("timestamp"))}</p>`;
 }
-else if (document.querySelector("h1").textContent === "Discover") {
+else if (document.querySelector("h1").textContent === "Chamber of Commerce Discover") {
 
+    function daysAgo(lastDate, currentDate) {
+        const diff = (Math.abs(lastDate.getTime() - currentDate.getTime()));
+        const days = Math.floor(diff / (86400000));
+        return days
+    }
 
-    
+    const today = new Date();
+    let numVisits = Number(window.localStorage.getItem("numVisits-ls")) || 0;
+    let lastVisit = Number(window.localStorage.getItem("lastVisit-ls")) || today;
+
+    if (numVisits == 0) {
+        visits.textContent = `Welcome!`;
+    }
+    else if (daysAgo(lastVisit,today) < 1) {
+        visits.textContent = `It's nice to see you again so soon!`;
+    }
+    else if (daysAgo(lastVisit,today) == 1) {
+        visits.textContent = `Welcome back! Your last visit was ` + daysAgo(lastVisit,today) + ` day ago.`;
+    }
+    else if (daysAgo(lastVisit,today) > 1) {
+        visits.textContent = `Welcome back! Your last visit was ` + daysAgo(lastVisit,today) + ` days ago.`;
+    }
+
+    numVisits++;
+    localStorage.setItem("numVisits-ls", numVisits);
+    localStorage.setItem("lastVisit-ls", lastVisit);
 }

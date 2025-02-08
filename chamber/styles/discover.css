@@ -1,4 +1,4 @@
-.card {
+section {
     min-width: 310px;
     border-radius: 1rem;
 }
@@ -14,18 +14,21 @@ address, p {
 }
 
 .sidebar {
-    background-color: #f5f5dc;
+	font-weight: bolder;
+	font-size: larger;
 }
 
-.learn {
+button {
+    background-color: #f0f0f0;
     height: 50px;
     max-width: 1025px;
     width: 98%;
     margin: 5px 1%;
+    align-self: end;
     border-radius: 1.8rem;
 }
 
-.learn:hover {
+button:hover {
     background-color: #ddd;
 }
 
@@ -33,14 +36,20 @@ address, p {
 
     main {
         display: grid;
-        grid-template-areas: "a b" "c b" "d b" "e b" "f b" "g b" "h b" "i b";
+        grid-template-areas: "a b" "c b" "d b" "e b" "f b" "g b" "h b" "i b" "j b";
+    }
+
+    h1 {
+        grid-area: a;
     }
 
     .sidebar {
+        border-left: var(--border);
+        background-color: #f5f5dc;
         grid-area: b;
     }
 
-    .card {
+    section {
         min-width: 510px;
         display: grid;
         grid-template-columns: 308px auto;
@@ -59,7 +68,7 @@ address, p {
         grid-area: b1;
     }
 
-    .learn {
+    button {
         grid-area: e1;
     }
 
@@ -89,14 +98,10 @@ address, p {
 @media screen and (min-width: 1025px) {
 
     main {
-        grid-template-areas: "a b c" "d e c" "f g c" "h i c";
+        grid-template-areas: "a a b" "c d b" "e f b" "g h b" "i j b";
     }
 
-    .sidebar {
-        grid-area: c;
-    }
-
-    .card {
+    section {
         min-width: 400px;
     }
 }
