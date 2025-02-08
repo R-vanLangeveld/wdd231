@@ -6,11 +6,6 @@
     --border: #000 thin solid;
 }
 
-@font-face {
-    font-family: "Roboto", serif;
-    src: url(https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap);
-}
-
 .roboto-400px {
     font-family: "Roboto", serif;
     font-weight: 400;
