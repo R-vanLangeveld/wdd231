@@ -1,0 +1,16 @@
+{
+    "resources": [
+        {
+            "name": "The Trevor Project",
+            "title": "The Trevor Project - Suicide Prevention for LGBTQ+ Young People",
+            "description": "The Trevor Project is the leading suicide prevention and crisis intervention nonprofit organization for LGBTQ+ young people. We provide information & support to LGBTQ+ young people 24/7, all year round.",
+            "logo": "https://www.thetrevorproject.org/wp-content/uploads/2021/09/cropped-OG_IMG_ORANGE-BG-1-192x192.jpg"
+        },
+        {
+            "name": "Testing",
+            "title": "Testing",
+            "description": "I need to make sure this all works properly",
+            "logo": "https://r-vanlangeveld.github.io/wdd231/chamber/images/layout-shift-blocker.png"
+        }
+    ]
+}
