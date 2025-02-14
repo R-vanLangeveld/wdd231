@@ -1,0 +1,236 @@
+:root {
+    --primary-color: #ff8c00;
+    --secondary-color: #2892d7;
+    --accent-color: #d7cf07;
+    --darkmode-color: #333;
+    --lightmode-color: #eee;
+    --heading-font: "Roboto Slab", serif;
+    --paragraph-font: "Roboto", sans-serif;
+    --border: var(--accent-color) thin solid;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--paragraph-font);
+}
+
+body {
+    background-color: var(--darkmode-color);
+    color: var(--lightmode-color);
+}
+
+main {
+    padding: 5px;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 70px auto;
+    background-color: var(--primary-color);
+    min-height: 70px;
+    max-height: 210px;
+}
+
+#light.lightMode, .lightMode {
+    color: #000;
+    border-color: #000;
+}
+
+#light.lightMode, body.lightMode {
+    background-color: var(--lightmode-color);
+}
+
+#light.lightMode {
+    border-style: inset;
+}
+
+#light {
+    width: 70px;
+    font-size: 1.5rem;
+    background-color: var(--darkmode-color);
+    color: var(--lightmode-color);
+    border: var(--lightmode-color) 3px outset;
+}
+
+#menu {
+    grid-column: 2/3;
+    font-size: 1.5rem;
+    justify-self: end;
+    background: none;
+    border: none;
+    width: 70px;
+    height: 70px;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "⨉";
+}
+
+nav {
+    grid-row: 2/3;
+    grid-column: 1/3;
+    display: grid;
+    grid-template-rows: 0fr;
+    background-color: #aaa;
+    transition: grid-template-rows 0.5s ease-out;
+}
+
+nav menu {
+    display: none;
+    list-style-type: none;
+    font-size: large;
+}
+
+nav.open {
+    padding-bottom: 1px;
+    grid-template-rows: 1fr;
+}
+
+nav.open menu {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+a {
+    color: #00f2f2;
+}
+
+a:visited {
+    color: #daf200;
+    text-decoration-color: #daf200;
+}
+
+a:hover {
+    text-decoration: underline double 2px #3fe;
+}
+
+nav menu a {
+    padding: 10px;
+    text-decoration-thickness: 3px;
+}
+
+nav menu a, .social a, a.lightMode {
+    color: #007;
+}
+
+nav menu a:visited, .social a:visited, a:visited.lightMode {
+    color: #206;
+    text-decoration-color: #551a8b;
+}
+
+nav menu a:hover, .social a:hover, a:hover.lightMode {
+    text-decoration: underline double 2px #0a0dab;
+}
+
+.active {
+    color: #016;
+    text-decoration-thickness: 4px;
+    text-decoration-color: #016;
+}
+
+.active::before, .active::after {
+    content: "◊";
+}
+
+:focus {
+    border-radius: .3rem;
+    outline-color: #dc143c;
+}
+
+h1, h2, h3 {
+    font-family: var(--heading-font);
+}
+
+h1 {
+    margin: 10px;
+}
+
+p {
+    margin: 5px;
+}
+
+h2, h3 {
+    background-color: var(--secondary-color);
+    color: #000;
+    padding: 5px;
+}
+
+section, div {
+    margin: 5px;
+    border: var(--border);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+span {
+    text-wrap: wrap;
+}
+
+footer {
+    color: #000;
+    background-color: var(--primary-color);
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.social {
+    margin: 0;
+    display: flex;
+    background-color: transparent;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 230px;
+    height: 80px;
+    border: none;
+}
+
+.social a {
+    padding: 0;
+    height: 70px;
+}
+
+@media screen and (min-width: 400px) {
+
+    #menu {
+        display: none;
+    }
+
+    nav {
+        grid-column: 2/3;
+        grid-row: 1;
+        padding: 5px;
+        grid-template-rows: 1fr;
+        background-color: transparent;
+        height: 70px;
+        transition: none;
+    }
+
+    nav menu, nav.open menu {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        align-self: center;
+    }
+}
+
+@media screen and (min-width: 560px) {
+
+    footer {
+        display: grid;
+        grid-template-columns: 230px auto;
+        text-align: start;
+    }
+}

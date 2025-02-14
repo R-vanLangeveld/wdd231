@@ -1,0 +1,61 @@
+form, fieldset {
+    border-radius: 0.5rem;
+    margin: 5px;
+    border: var(--border);
+    overflow: hidden;
+}
+
+fieldset {
+    padding: 5px 10px 10px;
+}
+
+legend {
+    color: #000;
+    background-color: var(--primary-color);
+    border: var(--border);
+    padding: 5px;
+    border-radius: 0.5rem;
+}
+
+label {
+    display: block;
+    margin: 10px 0 ;
+}
+
+label:first-of-type {
+    margin-top: 0;
+}
+
+label:last-of-type {
+    margin-bottom: 0;
+}
+
+input, select, textarea {
+    border: #7d7d7d 2px solid;
+    width: 100%;
+    padding: 5px;
+    margin-top: 2px;
+    appearance: none;
+    background-color: #ddd;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline-color: #0bf;
+}
+
+:required, :required:focus {
+    border-left: #800 solid 8px;
+}
+
+:required:valid, :required:valid:focus {
+    border-left: #080 solid 8px;
+}
+
+input[type="submit"] {
+    min-width: 95px;
+    height: 45px;
+    width: 96%;
+    margin: 5px 2%;
+    border-radius: 0.5rem;
+    background-image: radial-gradient(circle, #f00a 8%, #ff0a 32%, #0f0a 40%, #0ffa 60%, #00fa 80%, #f0fa 100%);
+}

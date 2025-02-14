@@ -1,0 +1,112 @@
+.container {
+    min-width: 250px;
+}
+
+#cards {
+    text-align: center;
+    margin: 5px;
+    min-width: 238px;
+    border: none;
+    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 238px);
+}
+
+#cards section {
+    min-width: 228px;
+    max-width: 300px;
+    width: 228px;
+    margin: 5px;
+}
+
+figure {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    max-width: 302px;
+    margin: 5px;
+    width: fit-content;
+    border: var(--border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+figcaption {
+    padding: 5px;
+}
+
+dialog img.lightMode {
+    background-color: var(--lightmode-color);
+    padding: 5px;
+}
+
+dialog {
+    background-color: var(--darkmode-color);
+    color: var(--lightmode-color);
+    border: var(--border);
+    border-radius: 0.5rem;
+    min-height: 400px;
+    max-width: 600px;
+    width: 98%;
+    margin: auto;
+}
+
+dialog p {
+    margin: 10px;
+}
+
+dialog h2 {
+    min-height: 60px;
+    padding: 15px 60px 15px 10px;
+}
+
+dialog.lightMode {
+    color: #000;
+    border-color: #000;
+    background-color: var(--lightmode-color);
+}
+
+::backdrop {
+    background-color: #4d4d4dc6;
+}
+
+dialog button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: #000 thin solid;
+    color: #000;
+    border-radius: 0.5rem;
+    background-color: #fff5;
+    width: 50px;
+    height: 50px;
+}
+
+@media screen and (min-width: 600px) {
+
+    main {
+        display: grid;
+        grid-template-columns: minmax(310px, 410px) auto;
+        text-align: start;
+    }
+
+    h1 {
+        grid-column: 1/3;
+    }
+
+    form {
+        position: sticky;
+        top: 10px;
+        min-width: 300px;
+        max-width: 400px;
+        width: auto;
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .container {
+        grid-column: 2/3;
+        grid-row: 2/4;
+    }
+}
