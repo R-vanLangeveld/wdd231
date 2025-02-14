@@ -5,105 +5,135 @@
             "title": "The Trevor Project - Suicide Prevention for LGBTQ+ Young People",
             "description": "The Trevor Project is the leading suicide prevention and crisis intervention nonprofit organization for LGBTQ+ young people. We provide information & support to LGBTQ+ young people 24/7, all year round.",
             "logo": "https://www.thetrevorproject.org/wp-content/uploads/2021/09/cropped-OG_IMG_ORANGE-BG-1-192x192.jpg",
-            "link": "https://www.thetrevorproject.org/"
+            "link": "https://www.thetrevorproject.org/",
+            "width": "192",
+            "height": "192"
         },
         {
             "name": "211 Utah",
             "title": "Find Resources and Help with Utah 211",
             "description": "211 Utah is the state's leading resource network connecting Utahns in need with local health and human services. Supported by United Ways of Utah, this vital service is free and confidential.",
             "logo": "https://211utah.org/wp-content/uploads/2024/09/211-graphic_only-512x5121-1-300x300.png",
-            "link": "https://211utah.org/"
+            "link": "https://211utah.org/",
+            "width": "300",
+            "height": "300"
         },
         {
             "name": "HUD",
             "title": "HUD | HUD.gov / U.S. Department of Housing and Urban Development (HUD)",
             "description": "HUD provides housing support and uplifts communities. Let us guide your next steps to the right place.",
             "logo": "https://www.hud.gov/sites/dfiles/Main/images/HUD_Logo_White.png",
-            "link": "https://www.hud.gov/"
+            "link": "https://www.hud.gov/",
+            "width": "61",
+            "height": "61"
         },
         {
             "name": "Department of Workforce Services",
             "title": "Department of Workforce Services",
             "description": "We offer services to help you support your family, find your next job opportunity or grow your business. Start here.",
             "logo": "https://mydoorway.utah.gov/wp-content/uploads/2024/08/cropped-favicon-192x192.png",
-            "link": "https://jobs.utah.gov/"
+            "link": "https://jobs.utah.gov/",
+            "width": "192",
+            "height": "192"
         },
         {
             "name": "The Road Home",
             "title": "Home - The Road Home",
             "description": "The Road Home provides emergency shelter, supportive services, and housing assistance that help individuals and families step out of homelessness.",
             "logo": "https://theroadhome.org/wp-content/uploads/2020/12/cropped-logo-trh-ico-192x192.png",
-            "link": "https://theroadhome.org/"
+            "link": "https://theroadhome.org/",
+            "width": "192",
+            "height": "192"
         },
         {
             "name": "DWS Doorway",
             "title": "DWS Doorway",
             "description": "Let the Department of Workforce Services help you find the right doorway when you're facing life's challenges. We provide job support and training, food, medical and utility assistance, unemployment, disability services and more. Use the dropdown menu to learn about our programs and find out if you're eligible.",
             "logo": "https://mydoorway.utah.gov/wp-content/uploads/2024/08/cropped-favicon-192x192.png",
-            "link": "https://mydoorway.utah.gov/"
+            "link": "https://mydoorway.utah.gov/",
+            "width": "192",
+            "height": "192"
         },
         {
             "name": "Hospitality House",
             "title": "Hospitality House | Proudly Serving Nevada County",
             "description": "The mission of Hospitality House is to provide pathways to permanent housing by compassionately bringing homeless people in Nevada County into a circle of community caring that offers shelter, housing resources, sustenance, opportunity, dignity, and hope as we assist them in transitioning from homelessness to housing.",
             "logo": "https://hhshelter.org/wp-content/uploads/2021/02/cropped-web-icon-HH_icon_house-192x192.png",
-            "link": "https://hhshelter.org/"
+            "link": "https://hhshelter.org/",
+            "width": "192",
+            "height": "192"
         },
         {
             "name": "Utah Community Action",
             "title": "Home - UCA",
             "description": "Utah Community Action was founded in 1965 to meet the needs of the community, especially individuals experiencing poverty. The mission of Utah Community Action is to empower individuals, strengthen families, and build communities through education and self-reliance programs.  We do this through six core programs: Workforce Development, Head Start preschool, HEAT Utility Assistance, Housing & Case Management, Home Weatherization and Nutrition. Each year, Utah Community Action provides these services to approximately 50,000 children and families in our community, giving them the tools needed to attain and sustain self-reliance.",
             "logo": "https://utahca.org/wp-content/uploads/2021/07/favicon.png",
-            "link": "https://utahca.org/"
+            "link": "https://utahca.org/",
+            "width": "49",
+            "height": "49"
         },
         {
             "name": "Salvation Army",
             "title": "About Us | The Salvation Army USA",
             "description": "The Salvation Army, an international movement, is an evangelical part of the universal Christian Church. Its message is based on the Bible. Its ministry is motivated by the love of God. Its mission is to preach the gospel of Jesus Christ and to meet human needs in His name without discrimination.",
             "logo": "https://static.salvationarmy.org/us-east-1/templates/symphony/static_resources/images/favicons/android-chrome-192x192.png",
-            "link": "https://www.salvationarmyusa.org/usn/about/"
+            "link": "https://www.salvationarmyusa.org/usn/about/",
+            "width": "192",
+            "height": "192"
         },
         {
             "name": "Mental Health Hotline",
             "title": "National Mental Health Hotline | 866-903-3787",
             "description": "It's easy to get overwhelmed when you or someone you love is in distress, and talking to friends or relatives may be difficult. Reaching out saves lives, however, and the Mental health hotline provides the ear of a compassionate professional who knows how to deal with a mental health crisis. Sometimes, a brief conversation is all it takes to put things in perspective and move forward.",
             "logo": "https://cdn-ioakn.nitrocdn.com/EbkDNLbEXYvKTYJAPfMemiiivCneUdPp/assets/images/optimized/rev-ffa93c5/mentalhealthhotline.org/wp-content/uploads/2023/05/cropped-MHH-SiteID-192x192.png",
-            "link": "https://mentalhealthhotline.org/"
+            "link": "https://mentalhealthhotline.org/",
+            "width": "192",
+            "height": "192"
         },
         {
             "name": "NAMI",
             "title": "NAMI | National Alliance on Mental Illness",
             "description": "We are dedicated to building better lives for the millions of Americans affected by mental illness. Our Alliance includes more than 700 NAMI State Organizations and Affiliates who work in your community to raise awareness and provide support and education to those in need.",
             "logo": "https://www.nami.org/wp-content/uploads/2024/04/cropped-grassroots-siteicon-192x192.png",
-            "link": "https://nami.org"
+            "link": "https://nami.org",
+            "width": "192",
+            "height": "192"
         },
         {
             "name": "National Institute of Mental Health",
             "title": "National Institute of Mental Health (NIMH) - Transforming the understanding and treatment of mental illnesses",
             "description": "The National Institute of Mental Health (NIMH) is the lead federal agency for research on mental disorders. NIMH is one of the 27 Institutes and Centers that make up the National Institutes of Health (NIH), the largest biomedical research agency in the world. NIH is part of the U.S. Department of Health and Human Services (HHS).",
             "logo": "https://www.nimh.nih.gov/themes/nimhtheme/nimh-logo.svg",
-            "link": "https://www.nimh.nih.gov/"
+            "link": "https://www.nimh.nih.gov/",
+            "width": "300",
+            "height": "80"
         },
         {
             "name": "988 Lifeline",
             "title": "988 Lifeline - If you need emotional support, reach out to the national mental health hotline: 988.",
             "description": "At the 988 Suicide & Crisis Lifeline, we understand that life's challenges can sometimes be difficult. Whether you're facing mental health struggles, emotional distress, alcohol or drug use concerns, or just need someone to talk to, our caring counselors are here for you. You are not alone.",
             "logo": "https://988lifeline.org/wp-content/themes/beast/favicons/favicon.ico?v=2",
-            "link": "https://988lifeline.org/"
+            "link": "https://988lifeline.org/",
+            "width": "48",
+            "height": "48"
         },
         {
             "name": "Catholic Community Services of Utah",
             "title": "Catholic Community Services - Home",
             "description": "Since 1945, Catholic Community Services of Utah has been empowering people in need along the Wasatch Front to reach self-sufficiency. By giving strength to the vulnerable in our midst, CCS is able to lovingly serve and provide hope to those with the greatest need in our community regardless of race, religion or personal circumstance.",
-            "logo": "https://ccsutah.org/images/CCS_Logo_full-color.png",
-            "link": "https://ccsutah.org/"
+            "logo": "https://ccsutah.org/favicon.ico",
+            "link": "https://ccsutah.org/",
+            "width": "48",
+            "height": "48"
         },
         {
             "name": "Utah Food Bank",
             "title": "Utah Food Bank",
             "description": "Founded in 1904, Utah Food Bank has operated under various names but has always remained true to our mission of Fighting Hunger Statewide. 415,000 Utahns, which equates to 1 in 8 individuals, are at risk of missing a meal today. Even more alarming is that 1 in 6 Utah kids are unsure where their next meal is coming from. With your support last year, we distributed 65.5 million pounds of food, the equivalent of 54.6 million meals, to people facing hunger across the state.",
             "logo": "https://www.utahfoodbank.org/wp-content/themes/utahfoodbank/dist/images/logo.svg",
-            "link": "https://www.utahfoodbank.org/"
+            "link": "https://www.utahfoodbank.org/",
+            "width": "300",
+            "height": "140"
         }
     ]
 }
