@@ -48,7 +48,7 @@ function displayResources(resources) {
 };
 
 function displayDetails(name, title, description, logo, link, width, height) {
-    resource.innerHTML = `<h2>${name}</h2><button id="closeModal">⨉</button><p><a href="${link}">${title}</a></p><p>${description}</p><figure><img src="${logo}" alt="${name}'s Logo" loading="lazy"></img><figcaption>${name}'s Logo</figcaption></figure>`;
+    resource.innerHTML = `<h2>${name}</h2><button id="closeModal">⨉</button><p><a href="${link}">${title}</a></p><p>${description}</p><figure><img src="${logo}" alt="${name}'s Logo" width="${width}" height="${height}" loading="lazy"></img><figcaption>${name}'s Logo</figcaption></figure>`;
 
     if (resource.classList.contains("lightMode") === true) {
         resource.querySelector("figure").classList.add("lightMode");
@@ -58,8 +58,6 @@ function displayDetails(name, title, description, logo, link, width, height) {
     if (name === "Utah Food Bank" || name === "National Institute of Mental Health") {
         resource.querySelector("img").classList.add("lightMode");
     }
-    resource.querySelector("img").setAttribute("width", width);
-    resource.querySelector("img").setAttribute("height", height);
     resource.showModal();
 
     closeModal.addEventListener("click", () => {
