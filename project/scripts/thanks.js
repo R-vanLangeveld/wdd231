@@ -22,7 +22,7 @@ if (show("from") === "resources") {
     });
     results.innerHTML = `<p id="visits"></p><p>Adding resources will take time, so don't expect it to be added immediately. All requested resources will be considered but not all resources will be added. The resource you request may not exist anymore.</p><p>Name of the requested website: ${show("websiteName")}</p><p>Url of the requested website: ${show("url")}</p><p>Description of the requested website: ${show("description")}</p><p>Request sent on ${Date(show("timestamp"))}</p>`;
 
-    let numVisits = Number(window.localStorage.getItem("numVisits-ls")) || 0;
+    let numVisits = Number(window.localStorage.getItem("requestsSent")) || 0;
     numVisits++;
     localStorage.setItem("requestsSent", numVisits);
     if (numVisits == 1) {
